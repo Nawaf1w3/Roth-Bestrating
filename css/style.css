@@ -308,6 +308,11 @@ button {
     align-items: start;
     width: 100%;
     float: left;
+}
+.banner_section {
+    align-items: start;
+    width: 100%;
+    float: left;
     background: url(../images/banner-bg.png) center right no-repeat;
     background-size: cover;
 }

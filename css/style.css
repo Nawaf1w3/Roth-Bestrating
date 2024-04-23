@@ -36,12 +36,25 @@
 * {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
+    
 }
 iframe {
     display: flex;
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
     
+}
+.logo_icon{
+    text-decoration: none;
+    color: #000;
+}
+.logo_icon:hover{
+    text-decoration: none;
+    color: #FF8141;
+}
+.werkgebieden
+{
+    display: flex;
 }
 
 html {
@@ -55,6 +68,8 @@ body {
     font-weight: normal;
     overflow-x: hidden;
     font-family: 'Raleway', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -258,7 +273,7 @@ button {
 }
 
 .call_text a:hover {
-    color: #fda417;
+    color: #FF8141;
 }
 
 .call_text_1 {
@@ -274,7 +289,7 @@ button {
 }
 
 .call_text_1 a:hover {
-    color: #fda417;
+    color: #FF8141;
 }
 
 .call_text_2 {
@@ -291,7 +306,7 @@ button {
 }
 
 .call_text_2 a:hover {
-    color: #fda417;
+    color: #FF8141;
 }
 
 .padding_left_15 {
@@ -304,17 +319,25 @@ button {
 
 /* header section start */
 
- .container-fluid-top{
+ .container-fluid-top {
     align-items: start;
     width: 100%;
     float: left;
+}
+.services{
+    max-width: 75%;
+    align-items: center;
+    justify-items: center;
+    margin-left: 12.5%;
 }
 .banner_section {
     align-items: start;
     width: 100%;
     float: left;
-    background: url(../images/banner-bg.png) center right no-repeat;
+    background: url(../IMG/paving_street_man.jpg) center right no-repeat;
     background-size: cover;
+    min-height: 556px;
+    max-height: 1600px;
 }
 
 .header_bg {
@@ -347,14 +370,14 @@ button {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #fda417;
+    color: #FF8141;
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: #fda417;
+    color: #FF8141;
 }
 
 
@@ -378,7 +401,7 @@ button {
 }
 
 .login_text li a:hover {
-    color: #fda417;
+    color: #FF8141;
 }
 
 
@@ -388,7 +411,7 @@ button {
     font-size: 16px;
     text-align: center;
     color: #ffffff;
-    background-color: #fda417;
+    background-color: #FF8141;
     border-radius: 40px;
     padding-right: 25px;
     padding-left: 25px;
@@ -464,12 +487,12 @@ button {
 
 .started_text a:hover {
     color: #ffffff;
-    background-color: #fda417;
+    background-color: #FF8141;
 }
 
 .started_text.active a {
     color: #ffffff;
-    background-color: #fda417;
+    background-color: #FF8141;
 }
 
 #my_slider a.carousel-control-prev {
@@ -608,7 +631,7 @@ button {
 }
 
 .read_bt_1 a:hover {
-    background-color: #fda417;
+    background-color: #FF8141;
     color: #ffffff;
 }
 
@@ -835,7 +858,7 @@ i.fa.fa-link {
 .project_main {
     width: 100%;
     padding: 20px;
-    background-color: #fda417;
+    background-color: #FF8141;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     top: -2px;
@@ -913,7 +936,7 @@ i.fa.fa-link {
 }
 
 .projects_section ul .nav-link.active {
-    background-color: #fda417;
+    background-color: #FF8141;
     color: #fff;
 }
 
@@ -980,7 +1003,7 @@ i.fa.fa-link {
     right: 0px;
     top: 500px;
     color: #fff;
-    background-color: #fda417;
+    background-color: #FF8141;
 }
 
 #costum_slider .carousel-control-next,
@@ -1001,7 +1024,7 @@ i.fa.fa-link {
 #costum_slider .carousel-control-prev:focus,
 #costum_slider .carousel-control-prev:hover {
     color: #fff;
-    background-color: #fda417;
+    background-color: #FF8141;
 }
 
 
@@ -1037,18 +1060,40 @@ i.fa.fa-link {
     float: left;
     padding-left: 85px;
     padding-top: 30px;
+    
 }
 
+
+
 .mail_text {
+    
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #c5c8c7;
+    color: #818181;
     border: 0px;
     background-color: transparent;
     padding: 8px 15px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     box-shadow: 0px 0px 10px 0px #cfcfcf;
+}
+
+
+
+  .voornaam, .achternaam {
+    font-size: 16px;
+    color: #818181;
+    border: 0px;
+    background-color: transparent;
+    padding: 8px 15px;
+    box-shadow: 0px 0px 10px 0px #cfcfcf; 
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+
+.voornaam::placeholder, .achternaam::placeholder {
+    color: #c5c8c7;
 }
 
 input.mail_text::placeholder {
@@ -1056,7 +1101,7 @@ input.mail_text::placeholder {
 }
 
 .massage-bt {
-    color: #c5c8c7;
+    color: #818181;
     width: 100%;
     height: 110px;
     font-size: 18px;
@@ -1080,7 +1125,7 @@ textarea#comment.massage-bt::placeholder {
     text-align: center;
     font-size: 18px;
     color: #ffffff;
-    background-color: #fda417;
+    background-color: #FF8141;
     padding: 12px;
     text-transform: uppercase;
     margin-top: 30px;
@@ -1124,11 +1169,16 @@ textarea#comment.massage-bt::placeholder {
 
 .useful_text {
     width: 100%;
-    font-size: 24px;
+    font-size: 35px;
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
+}
+.footer_section_2_flex{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .lorem_text {
@@ -1139,25 +1189,29 @@ textarea#comment.massage-bt::placeholder {
     margin: 0px;
     font-family: 'Poppins', sans-serif;
 }
+.werkgebieden-naam{
+    padding-top: 5px;
+}
 
 .location_text {
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 30px;
 }
-
 .location_text ul {
-    margin: 0px;
-    padding: 0px;
-    display: inline-block;
+    display: flex;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    justify-content: space-around;
 }
 
 .location_text li {
     float: left;
     font-size: 16px;
     color: #ffffff;
-    padding: 0px 120px 30px 120px;
+    /* padding: 0px 120px 30px 120px; */
     line-height: 30px;
     font-family: 'Poppins', sans-serif;
 }
@@ -1167,11 +1221,11 @@ textarea#comment.massage-bt::placeholder {
 }
 
 .location_text li a:hover {
-    color: #fda417;
+    color: #FF8141;
 }
 
 .location_text li.active a {
-    color: #fda417;
+    color: #FF8141;
 }
 
 .padding_15 {
@@ -1209,7 +1263,7 @@ textarea#comment.massage-bt::placeholder {
 }
 
 .social_icon li a:hover {
-    background-color: #fda417;
+    background-color: #FF8141;
     color: #ffffff;
 }
 
@@ -1240,7 +1294,7 @@ textarea#comment.massage-bt::placeholder {
     color: #ffffff;
     font-size: 16px;
     padding: 10px 0px;
-    background-color: #fda417;
+    background-color: #FF8141;
     text-transform: uppercase;
     text-align: center;
     border-radius: 40px;
@@ -1263,8 +1317,9 @@ textarea#comment.massage-bt::placeholder {
 }
 
 .footer_menu ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
@@ -1272,8 +1327,8 @@ textarea#comment.massage-bt::placeholder {
 .footer_menu li {
     font-size: 16px;
     color: #ffffff;
-    padding: 5px 0px 0px 0px;
-    flex-basis: 50%;
+    padding: 5px 0;
+    flex-basis: 50%; /* Each item takes up half of the container width */
 }
 
 .footer_menu li a {
@@ -1281,12 +1336,20 @@ textarea#comment.massage-bt::placeholder {
 }
 
 .footer_menu li a:hover {
-    color: #fda417;
+    color: #FF8141;
 }
 
 .footer_menu li.active a {
     color: #f9bc19;
 }
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+    .footer_menu li {
+        flex-basis: 100%; /* Each item takes up full container width on smaller screens */
+    }
+}
+
 
 
 /* footer section end */

@@ -38,18 +38,23 @@
     transition: ease all 0.5s;
     
 }
-.btn-submit{
-    
+.form-btn-submit{
     text-align: center;
     font-size: 18px;
     color: #ffffff;
     background-color: #FF8141;
-    padding: 12px;
-    text-transform: uppercase;
-    margin-top: 30px;
+    padding: 6px 16px 6px 16px;
+    margin-top: 15px;
     display: block;
     font-weight: bold;
     border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form-btn-submit:hover{
+    background-color: #000000;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
 }
 
 iframe {
@@ -497,17 +502,21 @@ button {
     text-align: center;
     font-size: 16px;
     border-radius: 40px;
+    
 }
 
 .started_text a:hover {
     color: #ffffff;
     background-color: #FF8141;
+    
 }
 
 .started_text.active a {
     color: #ffffff;
     background-color: #FF8141;
+    box-shadow: #FF8141(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 
 #my_slider a.carousel-control-prev {
     left: 30px;

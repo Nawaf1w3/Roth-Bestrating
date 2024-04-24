@@ -13,6 +13,14 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
+      <!--tab icon-->
+      <link rel="icon" sizes="180x120" href="IMG/logo2.png" type="I/x-icon">
+
+      <link rel="apple-touch-icon" sizes="180x120" href="IMG/logo2.pngg">
+    <!-- Additional favicon sizes (optional) -->
+      <link rel="icon" type="image/png" sizes="32x22" href="IMG/logo2.png">
+      <link rel="icon" type="image/png" sizes="16x10" href="IMG/logo2.png">
+
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- style css -->
@@ -54,8 +62,8 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <div class="container">
                   <a href="index.php" style="display: flex; align-items: center;">
-                     <img src="IMG/logo.png" alt="Brick Paving Logo" style="height: 70px;">
-                     <img src="IMG/bedrijfnaam1.png" alt="Brick Paving Logo" style="height: 70px;">
+                     <img src="IMG/logo2.png" alt="Brick Paving Logo" style="height: 70px;">
+                     <img src="IMG/bedrijfnaam3.png" alt="Brick Paving Logo" style="height: 70px;">
                    </a>
                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
@@ -432,11 +440,10 @@
       <!-- contact section start -->
       <div class="contact_section layout_padding justify-content-center">
          <div class="container">
-               <div class="row justify-content-center text-center">
-                  <div class="col-md-12 ">
-                     <h1 class="contact_taital">Contact Us</h1>
-                     <p>Bent u benieuwd wat wij voor uw opdracht kunnen betekenen? Vraag hieronder een geheel vrijblijvende offerte aan. Wij komen graag eerst bij u langs om de werkzaamheden te bekijken en uw wensen te bespreken.</p>
-                  </div>
+            <div class="row justify-content-center text-center">
+               <div class="col-md-12 ">
+                  <h1 class="contact_taital">Contact Us</h1>
+                  <p>Bent u benieuwd wat wij voor uw opdracht kunnen betekenen? Vraag hieronder een geheel vrijblijvende offerte aan. Wij komen graag eerst bij u langs om de werkzaamheden te bekijken en uw wensen te bespreken.</p>
                </div>
             </div>
          </div>
@@ -448,17 +455,17 @@
                         <div class="mail_section_1">
                            <div class="row">
                               <div class="col">
-                                <input type="text" class="voornaam" placeholder="Voornaam" name="voornaam">
+                              <input type="text" class="voornaam" placeholder="Voornaam" name="voornaam">
                               </div>
                               <div class="col">
-                                <input type="password" class="achternaam" placeholder="Achternaam" name="achternaam">
+                              <input type="password" class="achternaam" placeholder="Achternaam" name="achternaam">
                               </div>
-                            </div>
+                           </div>
                            <input type="text" class="mail_text" placeholder="Telefoon" name="telefoon">
                            <input type="text" class="mail_text" placeholder="Adres" name="adres"> 
                            <input type="text" class="mail_text" placeholder="Email" name="email">
                            <textarea class="massage-bt" placeholder="Uw vraag of opmerking" rows="5" id="comment" name="opmerking"></textarea>
-                           <button class="btn-submit" style="background-color:#FF8141; color:white;" type="submit">verzend</button>
+                           <button class="form-btn-submit" type="submit">verzend</button>
                         </div>
                      </form>
                   </div>
@@ -468,13 +475,11 @@
                </div>
             </div>
          </div>
-      </div>
-
-
-      <div class="1">
-         <div class="map_main justify-content-center">
-            <div class="map-responsive ">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.164045289348!2d5.729100723052699!3d52.51237023679408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c62b186d305203%3A0xacf5b0fc0fdb6a33!2sHondsrug%2033%2C%208251%20VP%20Dronten!5e0!3m2!1sar!2snl!4v1713796170183!5m2!1sar!2snl" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <div class="1">
+            <div class="map_main justify-content-center">
+               <div class="map-responsive ">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.164045289348!2d5.729100723052699!3d52.51237023679408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c62b186d305203%3A0xacf5b0fc0fdb6a33!2sHondsrug%2033%2C%208251%20VP%20Dronten!5e0!3m2!1sar!2snl!4v1713796170183!5m2!1sar!2snl" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
             </div>
          </div>
       </div>

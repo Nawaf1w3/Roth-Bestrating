@@ -38,6 +38,20 @@
     transition: ease all 0.5s;
     
 }
+.btn-submit{
+    
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #FF8141;
+    padding: 12px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    display: block;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
 iframe {
     display: flex;
     justify-content: center; /* Horizontally center */
@@ -506,7 +520,7 @@ button {
     top: 120px;
     left: 30px;
     color: #ffffff;
-    background-color: #f8c30b;
+    background-color: #FF8141;
 }
 
 #my_slider .carousel-control-next,
@@ -525,7 +539,7 @@ button {
 #my_slider .carousel-control-prev:focus,
 #my_slider .carousel-control-prev:hover {
     color: #ffffff;
-    background-color: #f8c30b;
+    background-color: #FF8141;
 }
 
 
@@ -922,22 +936,69 @@ i.fa.fa-link {
 .projects_section ul {
     margin-bottom: 0;
     float: left;
+    padding-right: 5px;
 }
 
 .projects_section ul .nav-link {
     color: #000;
     background-color: #fff;
-    padding: 12px 10px;
-    width: 145px;
+    padding: 15px 15px;
+    padding-left: 15px;
     text-align: center;
     margin: 0px 0px;
     text-transform: uppercase;
     position: relative;
 }
+.projects_section ul .nav-item {
+    padding-left: 10px;
+}
 
 .projects_section ul .nav-link.active {
+   
     background-color: #FF8141;
+    border-radius: 15px 50px 30px;
     color: #fff;
+}
+.projects_section ul .nav-link:hover {
+    border: solid 1px;
+    border-color: #FF8141;
+    border-radius: 15px 50px 30px;
+}
+
+
+/* new css */
+
+
+.projects_section ul {
+    margin-bottom: 0;
+    float: left;
+    padding-right: 5px;
+}
+
+.projects_section ul .project-fliter{
+    color: #000;
+    background-color: #fff;
+    padding: 15px 15px;
+    padding-left: 15px;
+    text-align: center;
+    margin: 0px 0px;
+    text-transform: uppercase;
+    position: relative;
+}
+.projects_section ul .filter-item  {
+    padding-left: 10px;
+}
+
+.projects_section ul .project-fliter.active {
+   
+    background-color: #FF8141;
+    border-radius: 15px 50px 30px;
+    color: #fff;
+}
+.projects_section ul .project-fliter:hover {
+    border: solid 1px;
+    border-color: #FF8141;
+    border-radius: 15px 50px 30px;
 }
 
 
@@ -1340,7 +1401,7 @@ textarea#comment.massage-bt::placeholder {
 }
 
 .footer_menu li.active a {
-    color: #f9bc19;
+    color: #FF8141;
 }
 
 /* Adjust styles for smaller screens */

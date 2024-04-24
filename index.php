@@ -53,7 +53,7 @@
          <div class="header_section bg-white">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <div class="container">
-                  <a href="" style="display: flex; align-items: center;">
+                  <a href="index.php" style="display: flex; align-items: center;">
                      <img src="IMG/logo.png" alt="Brick Paving Logo" style="height: 70px;">
                      <img src="IMG/bedrijfnaam1.png" alt="Brick Paving Logo" style="height: 70px;">
                    </a>
@@ -63,7 +63,7 @@
                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                        <ul class="navbar-nav ml-auto align-items-center">
                            <li class="nav-item">
-                               <a class="nav-link active" href="index.html">Home</a>
+                               <a class="nav-link active" href="index.php">Home</a>
                            </li>
                            <li class="nav-item">
                                <a class="nav-link" href="services.html">Services</a>
@@ -154,10 +154,9 @@
             </div>
          </div>
       </div>
-   
-        <!-- banner section end -->
-     
-      <!-- header section end -->
+         <!-- banner section end -->
+         <!-- header section end -->
+
       <!-- services section start -->
       <div class="services">
          <div class="services_section layout_padding">
@@ -249,23 +248,11 @@
                   <div class="nav-tabs-navigation">
                      <div class="nav-tabs-wrapper">
                         <ul class="nav " data-tabs="tabs">
-                           <li class="nav-item">
-                              <a class="nav-link active" href="#" data-toggle="tab">Category  filter</a>
+                           <li class="filter-item active">
+                              <a class="project-fliter active"style="user-select: none;" data-toggle="tab">straat bestrating</a>
                            </li>
-                           <li class="nav-item">
-                              <a class="nav-link " href="#" data-toggle="tab">All</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link " href="#" data-toggle="tab">Paintingl</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link " href="#" data-toggle="tab">Reconstructionl</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link " href="#" data-toggle="tab">Repairsl</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link " href="#" data-toggle="tab">Residentall</a>
+                           <li class="filter-item">
+                              <a class="project-fliter" style="user-select: none;" data-toggle="tab">tuinbestrating</a>
                            </li>
                         </ul>
                      </div>
@@ -279,11 +266,11 @@
                   <div class="pets_section_2">
                      <div id="main_slider" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                           <div class="carousel-item active">
+                        <div class="werk-item-1" data-category="straat bestrating">
                               <div class="row">
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/img-1.png" alt="" class="image">
+                                       <img src="IMG/werk/danny-machien.jpg" alt="" class="image">
                                        <div class="overlay">
                                           <div class="text">
                                              <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
@@ -297,7 +284,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/img-2.png" alt="" class="image">
+                                       <img src="IMG/werk/sierbestrating.jpg" alt="" class="image">
                                        <div class="overlay">
                                           <div class="text">
                                              <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
@@ -311,53 +298,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/img-3.png" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                        <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="carousel-item">
-                              <div class="row">
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/img-1.png" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/img-2.png" alt="" class="image">
-                                       <div class="overlay">
-                                          <div class="text">
-                                             <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="project_main">
-                                       <h2 class="work_text">Home Work</h2>
-                                       <p class="dummy_text">alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use</p>
-                                    </div>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <div class="container_main">
-                                       <img src="images/img-3.png" alt="" class="image">
+                                       <img src="IMG/werk/tuin sier bestrating.jpg" alt="" class="image">
                                        <div class="overlay">
                                           <div class="text">
                                              <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
@@ -371,11 +312,11 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="carousel-item">
+                           <div class="werk-item-2 active" data-category="tuinbestrating">
                               <div class="row">
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/img-1.png" alt="" class="image">
+                                       <img src="IMG/werk/tuin..bestrating.jpg" alt="" class="image">
                                        <div class="overlay">
                                           <div class="text">
                                              <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
@@ -389,7 +330,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/img-2.png" alt="" class="image">
+                                       <img src="IMG/werk/voorhuisbestrating.jpg" alt="" class="image">
                                        <div class="overlay">
                                           <div class="text">
                                              <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
@@ -403,7 +344,7 @@
                                  </div>
                                  <div class="col-md-4">
                                     <div class="container_main">
-                                       <img src="images/img-3.png" alt="" class="image">
+                                       <img src="IMG/werk/voortuin.jpg" alt="" class="image">
                                        <div class="overlay">
                                           <div class="text">
                                              <h4 class="some_text"><i class="fa fa-link" aria-hidden="true"></i></h4>
@@ -490,9 +431,11 @@
       <!-- contact section start -->
       <div class="contact_section layout_padding justify-content-center">
          <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="contact_taital">Contact Us</h1>
+               <div class="row justify-content-center text-center">
+                  <div class="col-md-12 ">
+                     <h1 class="contact_taital">Contact Us</h1>
+                     <p>Bent u benieuwd wat wij voor uw opdracht kunnen betekenen? Vraag hieronder een geheel vrijblijvende offerte aan. Wij komen graag eerst bij u langs om de werkzaamheden te bekijken en uw wensen te bespreken.</p>
+                  </div>
                </div>
             </div>
          </div>
@@ -514,7 +457,7 @@
                            <input type="text" class="mail_text" placeholder="Adres" name="adres"> 
                            <input type="text" class="mail_text" placeholder="Email" name="email">
                            <textarea class="massage-bt" placeholder="Uw vraag of opmerking" rows="5" id="comment" name="opmerking"></textarea>
-                           <button class="send_bt" type="submit">SEND</button>
+                           <button class="btn-submit" style="background-color:#FF8141; color:white;" type="submit">verzend</button>
                         </div>
                      </form>
                   </div>
@@ -571,7 +514,7 @@
                      <h2 class="useful_text">site menue</h2>
                      <div class="footer_menu">
                         <ul>
-                           <li><a href="index.html">Home</a></li>
+                           <li><a href="index.php">Home</a></li>
                            <li><a href="about.html">About</a></li>
                            <li><a href="services.html">Services</a></li>
                            <li><a href="projects.html">Projects</a></li>
@@ -646,5 +589,6 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
+      <script src="js/custom.js"></script>
    </body>
 </html>

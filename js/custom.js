@@ -2,6 +2,39 @@
     File Name: custom.js
 ---------------------------------------------------------------------*/
 
+
+document.addEventListener("DOMContentLoaded", function() {
+	var filterLinks = document.querySelectorAll('.project-fliter');
+	var projectItems = document.querySelectorAll('.werk-item-1, .werk-item-2');
+	
+	function filterProjects(category) {
+	   projectItems.forEach(function(item) {
+			 var itemCategory = item.dataset.category;
+			 if (category === 'alle' || category === itemCategory) {
+				item.style.display = 'block';
+			 } else {
+				item.style.display = 'none';
+			 }
+	   });
+	}
+	filterLinks.forEach(function(link) {
+	   link.addEventListener('click', function(event) {
+			 event.preventDefault();
+			 filterLinks.forEach(function(link) {
+				link.classList.remove('active');
+			 });
+			 this.classList.add('active');
+			 var category = this.textContent.trim();
+			 filterProjects(category);
+	   });
+	});
+	var initialActiveFilter = document.querySelector('.project-fliter.active');
+	if (initialActiveFilter) {
+	   var initialCategory = initialActiveFilter.textContent.trim();
+	   filterProjects(initialCategory);
+	}
+ });
+
 $(function () {
 	
 	"use strict";

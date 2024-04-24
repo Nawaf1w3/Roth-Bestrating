@@ -176,7 +176,7 @@
                <div class="row justify-content-center">
                   <div class="col-lg-4 col-sm-6 services_item">
                      <div class="box_main">
-                        <div class="service_img"><img src="IMG/pave.png"></div>
+                        <div class="service_img"><img src="IMG/pave-7.png"></div>
                         <h4 class="development_text">Bestrating</h4>
                         <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
                         <div class="readmore_bt"><a href="#">Lees Meer</a></div>
@@ -223,21 +223,22 @@
       <div class="about_section layout_padding">
          <div class="container">
             <div class="row">
-               <div class="col-md-6">
-                  <h1 class="about_taital">About Us</h1>
-                  <p class="about_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All </p>
-                  <div class="read_bt_1"><a href="#">Read More</a></div>
-               </div>
-               <div class="col-md-6">
-                  <div class="about_img">
-                     <div class="video_bt">
-                        <div class="play_icon"><img src="images/play-icon.png"></div>
+                  <div class="col-md-6">
+                     <h1 class="about_taital">Over Ons</h1>
+                     <p class="about_text">Bestratingbedrijf ROTH is uw betrouwbare partner voor hoogwaardige bestratingsdiensten. Wij streven naar perfectie in elk project dat we aanpakken. Met onze jarenlange ervaring en toewijding leveren we duurzame oplossingen die voldoen aan uw behoeften en verwachtingen.</p>
+                     <div class="read_bt_1"><a href="#">Lees Meer</a></div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="about_img">
+                        <div class="video_bt">
+                              <div class="play_icon"><img src="images/play-icon.png"></div>
+                        </div>
                      </div>
                   </div>
-               </div>
             </div>
          </div>
       </div>
+
       <!-- about sectuion end -->
       <!-- projects section start -->
       <div class="projects_section layout_padding">
@@ -565,20 +566,16 @@
          </div>
       <!-- footer section end -->
       <!-- copyright section start -->
-      <div class="copyright_section">
+      <div class="copyright_section pt-2 pb-2">
          <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <p class="copyright_text">© Copyright 2023 . 
-                     <a href="" rel="nofollow">
-                        Roth Bestrating 
-                     </a>
+            <div class="row justify-content-between">
+               <div class="">
+                  <a href="" rel="nofollow">
+                     Roth Bestrating 
+                  </a>
                      | KVK nr: 324234234 | BTW nr: Nl1111111111122 
-                      <a href="">
-                        | Privacyverklaring
-                     </a>
-                  </p>
                </div>
+            </div>
             </div>
          </div>
       </div>

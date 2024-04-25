@@ -237,6 +237,7 @@ $(function () {
 	/* Countdown
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 	
+	
 	$('[data-countdown]').each(function () {
         var $this = $(this),
 		finalDate = $(this).data('countdown');

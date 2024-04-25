@@ -35,8 +35,16 @@
 
 * {
     box-sizing: border-box !important;
-    transition: ease all 0.5s;
     
+    
+}
+.after_before{
+    justify-content: center;
+    align-items: center;
+}
+.box-1{
+    max-width:300px ;
+    max-height: 300px;
 }
 .form-btn-submit{
     text-align: center;

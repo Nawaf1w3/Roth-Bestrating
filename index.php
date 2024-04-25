@@ -14,12 +14,11 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!--tab icon-->
-      <link rel="icon" sizes="180x120" href="IMG/logo2.png" type="I/x-icon">
+      <link rel="icon" sizes="70x10" href="IMG/favicon.png" type="I/x-icon">
 
-      <link rel="apple-touch-icon" sizes="180x120" href="IMG/logo2.pngg">
+ 
     <!-- Additional favicon sizes (optional) -->
-      <link rel="icon" type="image/png" sizes="32x22" href="IMG/logo2.png">
-      <link rel="icon" type="image/png" sizes="16x10" href="IMG/logo2.png">
+      
 
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">

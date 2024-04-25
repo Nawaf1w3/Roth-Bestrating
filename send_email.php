@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $opmerking = $_POST['opmerking'];
 
     // Email details
-    $to = "97100725@st.deltion.nl"; // Your company email address
+    $to = "Info@rothbestrating.nl"; // Your company email address
     $subject = "Bestratingbedrijf Roth";
     $message = "<p style='font-family: Arial, sans-serif; font-size: 24px;'>Uw klant heeft een vraag op Bestratingbedrijf Roth: <br><br></p>
             <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Klant naam</strong><br>$voornaam $achternaam</p>

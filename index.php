@@ -186,23 +186,28 @@
                         <div class="service_img"><img src="IMG/pave-7.png"></div>
                         <h4 class="development_text">Bestrating</h4>
                         <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
-                        <div class="readmore_bt"><a href="#">Lees Meer</a></div>
+                        <div class="readmore_bt"><i>Lees Meer</i></div>
                      </div>
+                     
                   </div>
+
                   <div class="col-lg-4 col-sm-6 services_item">
+                  <a href="tuinbestrating.html">
                      <div class="box_main">
                         <div class="service_img"><img src="IMG/garden.png"></div>
                         <h4 class="development_text">Tuin bestrating</h4>
                         <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
-                        <div class="readmore_bt"><a href="#">Lees Meer</a></div>
+                        <div class="readmore_bt"><i>Lees Meer</i></div>
+                        </a>
                      </div>
+                     
                   </div>
                   <div class="col-lg-4 col-sm-6 services_item">
                      <div class="box_main">
                         <div class="service_img"><img src="IMG/paving.png"></div>
                         <h4 class="development_text">Sierbestrating</h4>
                         <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
-                        <div class="readmore_bt"><a href="#">Lees Meer</a></div>
+                        <div class="readmore_bt"><i>Lees Meer</i></div>
                      </div>
                   </div>
                   <div class="col-lg-4 col-sm-6 services_item">
@@ -210,7 +215,7 @@
                         <div class="service_img"><img src="IMG/Graafmachine.png"></div>
                         <h4 class="development_text">grondwerk</h4>
                         <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
-                        <div class="readmore_bt"><a href="#">Lees Meer</a></div>
+                        <div class="readmore_bt"><i>Lees Meer</i></div>
                      </div>
                   </div>
                   <div class="col-lg-4 col-sm-6 services_item">
@@ -218,7 +223,7 @@
                         <div class="service_img"><img src="IMG/truck.png"></div>
                         <h4 class="development_text">Materialen leveren</h4>
                         <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
-                        <div class="readmore_bt"><a href="#">Lees Meer</a></div>
+                        <div class="readmore_bt"><i>Lees Meer</i></div>
                      </div>
                   </div>
                </div>

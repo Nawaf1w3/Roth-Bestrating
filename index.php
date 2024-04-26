@@ -1,100 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Builder Max</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!--tab icon-->
-      <link rel="icon" sizes="70x10" href="IMG/favicon.png" type="I/x-icon">
 
- 
-    <!-- Additional favicon sizes (optional) -->
-      
-
-      <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
-
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-   </head>
-   <body>
-      <!-- header top section start -->
-      <div class="header_top_section">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="header_top_main">
-                     <div class="call_text"><a href="tel:+31611169596"><i class="fa fa-phone" aria-hidden="true"></i> 06-11169596</a></div>
-                     <div class="call_text_2"><a href="mailto:info@rothbestrating.nl?subject=Question%20About%20Services"><i class="fa fa-envelope" aria-hidden="true"></i> Info@rothbestrating.nl </a></div>
-                     <div class="call_text_1"><a href="https://wa.me/+31611169596" target="_blank"><img class="" src="IMG/whatsapp.png" alt="" width="120" height="32"></a></div>
-                     <div class="call_text_1"><a href="https://maps.app.goo.gl/zw5xJ5LnXPNHtKHE9" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i> Hondsrug 33, Dronten</a></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- header top section start -->
-      <!-- header section start -->
-      <div class="container-fluid-top">
-         <div class="header_section bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="container">
-                  <a href="index.php" style="display: flex; align-items: center;">
-                     <img src="IMG/logo2.png" alt="Brick Paving Logo" style="height: 70px;">
-                     <img src="IMG/bedrijfnaam3.png" alt="Brick Paving Logo" style="height: 70px;">
-                   </a>
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon"></span>
-                  </button>
-                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                       <ul class="navbar-nav ml-auto align-items-center">
-                           <li class="nav-item">
-                               <a class="nav-link active" href="index.php">Home</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="services.html">Services</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="about.html">About</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="projects.html">Project</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="contact.html">Contact</a>
-                           </li>
-                           <div class="nav-item  justify-content-center align-items-center">
-                              <div class="quote_btn"><a href="#">OFFERTE</a></div>
-                         </div>
-                       </ul>
-                   </div>
-               </div>
-           </nav>
-           
-         </div>
+<?php
+   include ('header-nav.html')
+?>
          <!-- banner section start -->
-         <div class="banner_section layout_padding">
+         <div class="banner_section preload-background layout_padding">
             <div id="my_slider" class="carousel slide" data-ride="carousel">
                <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -182,17 +91,18 @@
             <div class="services_section_2 ">
                <div class="row justify-content-center">
                   <div class="col-lg-4 col-sm-6 services_item">
-                     <div class="box_main">
-                        <div class="service_img"><img src="IMG/pave-7.png"></div>
-                        <h4 class="development_text">Bestrating</h4>
-                        <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
-                        <div class="readmore_bt"><i>Lees Meer</i></div>
-                     </div>
-                     
+                     <a href="Bestrating.php">
+                        <div class="box_main">
+                           <div class="service_img"><img src="IMG/pave-7.png"></div>
+                           <h4 class="development_text">Bestrating</h4>
+                           <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
+                           <div class="readmore_bt"><i>Lees Meer</i></div>
+                        </div>
+                     </a>
                   </div>
 
                   <div class="col-lg-4 col-sm-6 services_item">
-                  <a href="tuinbestrating.html">
+                  <a href="tuinbestrating.php">
                      <div class="box_main">
                         <div class="service_img"><img src="IMG/garden.png"></div>
                         <h4 class="development_text">Tuin bestrating</h4>
@@ -203,12 +113,18 @@
                      
                   </div>
                   <div class="col-lg-4 col-sm-6 services_item">
-                     <div class="box_main">
-                        <div class="service_img"><img src="IMG/paving.png"></div>
-                        <h4 class="development_text">Sierbestrating</h4>
-                        <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sint doloremque odit, neque id unde voluptate saepe dolor eveniet? Labore, veritatis. Expedita perspiciatis in nesciunt impedit! At sapiente dolorum ducimus.</p>
-                        <div class="readmore_bt"><i>Lees Meer</i></div>
-                     </div>
+                     <a href="sierbestrating.php">
+                        <div class="box_main">
+                           <div class="service_img"><img src="IMG/paving.png"></div>
+                           <h4 class="development_text">Sierbestrating</h4>
+                           <p class="services_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                               Aut sint doloremque odit,
+                                neque id unde voluptate saepe dolor eveniet? Labore,
+                                 veritatis. Expedita perspiciatis in nesciunt impedit!
+                                  At sapiente dolorum ducimus.</p>
+                           <div class="readmore_bt"><i>Lees Meer</i></div>
+                        </div>
+                     </a>
                   </div>
                   <div class="col-lg-4 col-sm-6 services_item">
                      <div class="box_main">
@@ -446,13 +362,17 @@
          <div class="container">
             <div class="row justify-content-center text-center">
                <div class="col-md-12 ">
-                  <h1 class="contact_taital">Contact Us</h1>
-                  <p>Bent u benieuwd wat wij voor uw opdracht kunnen betekenen? Vraag hieronder een geheel vrijblijvende offerte aan. Wij komen graag eerst bij u langs om de werkzaamheden te bekijken en uw wensen te bespreken.</p>
+                  <h1 class="contact_taital">Of u nu op zoek bent naar een elegante oprit</h1>
+                  <p>Sfeervolle sierbestrating of een functioneel terras.
+                      Wij staan klaar om u buitenruimte te transformeren met prachtige bestrating. Laat pns weten welke stijl,
+                       kleuren en patronen u in gedachten hebt,
+                        en wij zullen onze expertise inzetten om een meesterwerk te creëren dat niet alleen mooi is,
+                         maar ook duurzaam en functioneel. Vul het <strong><a class="font-weight-bold scroll-to-btn" href="#contact_section_2">formulier</a></strong>  in en geef uw straatwerk richting en karakter!</p>
                </div>
             </div>
          </div>
          <div class="container-fluid justify-content-center">
-            <div class="contact_section_2 ">
+            <div class="contact_section_2 " id="contact_section_2">
                <div class="row">
                   <div class="col-md-6">
                      <form action="send_email.php" method="post">
@@ -469,7 +389,7 @@
                            <input type="text" class="mail_text" placeholder="Adres" name="adres"> 
                            <input type="text" class="mail_text" placeholder="Email" name="email">
                            <textarea class="massage-bt" placeholder="Uw vraag of opmerking" rows="5" id="comment" name="opmerking"></textarea>
-                           <button class="form-btn-submit" type="submit">verzend</button>
+                           <button class="form-btn-submit"  type="submit">verzend</button>
                         </div>
                      </form>
                   </div>
@@ -482,119 +402,22 @@
          <div class="1">
             <div class="map_main justify-content-center">
                <div class="map-responsive ">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.164045289348!2d5.729100723052699!3d52.51237023679408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c62b186d305203%3A0xacf5b0fc0fdb6a33!2sHondsrug%2033%2C%208251%20VP%20Dronten!5e0!3m2!1sar!2snl!4v1713796170183!5m2!1sar!2snl" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.164045289348!2d5.729100723052699!3d52.51237023679408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c62b186d305203%3A0xf30859ede33f3106!2sRoth%20Bestrating!5e0!3m2!1sar!2snl!4v1714117862745!5m2!1sar!2snl" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                </div>
             </div>
          </div>
       </div>
       <!-- contact section end -->
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="footer_section_2">
-               <div class="footer_section_2_flex">
-                  <div class="col-md-4">
-                     <h2 class="useful_text">QUICK LINKS</h2>
-                     <div class="footer_menu">
-                        <ul class="">
-                           <li class="">
-                               <a href="tel:+31611169596" target="_blank" class="">
-                                   <i class="fa fa-mobile" aria-hidden="true"></i><br>Call 06-11169596
-                               </a>
-                           </li>
-                           <li class="">
-                               <a href="mailto:info@rothbestrating.nl" target="_blank" class="">
-                                  <i class="fa fa-envelope" aria-hidden="true"></i><br> info@rothbestrating.nl
-                               </a>
-                           </li>
-                           <li class="">
-                              <a href="https://maps.app.goo.gl/zw5xJ5LnXPNHtKHE9" target="_blank" class="">
-                                   <i class="fa fa-map-marker" aria-hidden="true"></i><br> Location
-                              </a>
-                          </li>
-                       </ul>
-                       <div>
-                        <li class="">
-                           <a href="https://wa.me/+31611169596" target="_blank"><img class="" src="IMG/whatsapp.png" alt="" width="120" height="32"></i>
-                        </li>
-                       </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <h2 class="useful_text">site menue</h2>
-                     <div class="footer_menu">
-                        <ul>
-                           <li><a href="index.php">Home</a></li>
-                           <li><a href="about.html">About</a></li>
-                           <li><a href="services.html">Services</a></li>
-                           <li><a href="projects.html">Projects</a></li>
-                           <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <h2 class="useful_text">WERKGEBIEDEN</h2>
-                     <div class="footer_menu">
-                        <ul>
-                           <li>Steenwijk</li>
-                           <li>Meppel</li>
-                           <li>Emmeloord</li>
-                           <li>Havelte</li>
-                           <li>Wolvega</li>
-                           <li>Lelystad</li>
-                           <li>Leeuwarden</li>
-                           <li>Dronten</li>
-                           <li>Assen</li>
-                           <li>Heerenveen</li>
-                           <li>Urk</li>
-                           <li>Zwolle</li>
-                           <li>Hardenberg</li>
-                           <li>Hoogeveen</li>
-                        </ul>
-                     </div>
-                  </div>      
-                  </div>
-               </div>
-            </div>
-            <div class="social_icon">
-               <ul>
-                  <li>
-                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                  </li>
-                  <li>
-                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section pt-2 pb-2">
-         <div class="container">
-            <div class="row justify-content-between">
-               <div class="">
-                  <a href="" rel="nofollow">
-                     Roth Bestrating 
-                  </a>
-                     | KVK nr: 324234234 | BTW nr: Nl1111111111122 
-               </div>
-            </div>
-            </div>
-         </div>
-      </div>
-      <!-- copyright section end -->
-      <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
+      <!-- <script src="js/plugin.js"></script> -->
       <script src="js/custom.js"></script>
+      <?php
+      include('footer.html');
+      ?>
+
    </body>
 </html>

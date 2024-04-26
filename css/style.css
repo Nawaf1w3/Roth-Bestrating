@@ -357,16 +357,30 @@ button {
     justify-items: center;
     margin-left: 12.5%;
 }
+
 .banner_section {
     align-items: start;
     width: 100%;
     float: left;
-    background: url(../IMG/paving_street_man.jpg) center right no-repeat;
-    background-size: cover;
     min-height: 556px;
     max-height: 1600px;
+    background: url(../IMG/paving_street_man.jpg) center right no-repeat;
+    background-size: cover;
 }
 
+.preload-background {
+    background-image: url(../IMG/paving_street_man.jpg);
+    /* Keep the element displayed while preloading */
+}
+  
+
+@media (max-width: 700px){
+    .banner_section  {
+
+        background: url(../IMG/paving_street_man.jpg) center right no-repeat;
+
+    }
+}
 .header_bg {
     background-color: white;
     max-height: 30px;
@@ -458,7 +472,7 @@ button {
 
 /* banner section start */
 
-.banner_section {
+.banner_section  {
     width: 100%;
     float: left;
     padding: 90px 0px;
@@ -1135,7 +1149,7 @@ i.fa.fa-link {
 }
 
 .mail_section_1 {
-    width: 100%;
+    width: 80%;
     float: left;
     padding-left: 85px;
     padding-top: 30px;

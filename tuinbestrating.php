@@ -1,98 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-     
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-
-      <title>Projects</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-
-      <link rel="stylesheet" type="text/css" href="css/twentytwenty.css">
-
-      <link rel="stylesheet" href="css/responsive.css">
- 
-      <link rel="icon" href="IMG/favicon.png" type="image/gif" />
-   
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;800&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
-
-      <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-      <script src="js/jquery.event.move.js"></script>
-      <script src="js/jquery.twentytwenty.js"></script>
-
-      
-   </head>
-   <body>
-      <!-- header top section start -->
-      <div class="header_top_section">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="header_top_main">
-                     <div class="call_text"><a href="tel:+31611169596"><i class="fa fa-phone" aria-hidden="true"></i> 06-11169596</a></div>
-                     <div class="call_text_2"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Info@rothbestrating.nl </a></div>
-                     <div class="call_text_1"><a href="https://wa.me/+31611169596" target="_blank"><img class="" src="IMG/whatsapp.png" alt="" width="120" height="32"></a></div>
-                     <div class="call_text_1"><a href="https://maps.app.goo.gl/zw5xJ5LnXPNHtKHE9" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i> Hondsrug 33, Dronten</a></div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- header top section start -->
-      <!-- header section start -->
-      <div class="container-fluid-top">
-         <div class="header_section bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="container">
-                  <a href="index.php" style="display: flex; align-items: center;">
-                     <img src="IMG/logo.png" alt="Brick Paving Logo" style="height: 70px;">
-                     <img src="IMG/bedrijfnaam1.png" alt="Brick Paving Logo" style="height: 70px;">
-                   </a>
-                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon"></span>
-                  </button>
-                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                       <ul class="navbar-nav ml-auto align-items-center">
-                           <li class="nav-item">
-                               <a class="nav-link" href="index.php">Home</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="services.html">Services</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="about.html">About</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="projects.html">Project</a>
-                           </li>
-                           <li class="nav-item">
-                               <a class="nav-link" href="contact.html">Contact</a>
-                           </li>
-                           <div class="nav-item  justify-content-center align-items-center">
-                              <div class="quote_btn"><a href="#">OFFERTE</a></div>
-                         </div>
-                       </ul>
-                   </div>
-               </div>
-           </nav>
-           
-         </div>
+   <?php
+      include('header-nav.html');
+   ?>
          <!-- banner section start -->
-         <div class="banner_section layout_padding">
+         <div class="banner_section preload-background layout_padding">
             <div id="my_slider" class="carousel slide" data-ride="carousel">
                <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -141,8 +51,8 @@
                         <div class="col-md-6">
                            <div class="after_before">  
                               <div class="box-1">
-                                 <img src="IMG/tuinbestrating/Tuin_Voor.jpg" >
-                                 <img src="IMG/tuinbestrating/tuin-na.jpg">
+                                 <img src="IMG/tuinbestrating/tuin_Svoor1.png" >
+                                 <img src="IMG/tuinbestrating/tuin-Sna.png">
                               </div>
                            </div> 
                         </div>
@@ -150,7 +60,6 @@
                             <h1 class="about_taital">Totaal Tuinaanleg Services</h1>
                             <p class="about_text">Ontdek de uitgebreide tuinaanlegservices van Bestratingbedrijf ROTH. Van ontwerp tot realisatie, wij bieden een totaaloplossing voor uw tuinprojecten. Met aandacht voor detail en vakmanschap transformeren we uw buitenruimte tot een harmonieus geheel dat perfect aansluit op uw wensen en levensstijl.</p>
                         </div>
-
                     </div>
                 </div>
             </div>

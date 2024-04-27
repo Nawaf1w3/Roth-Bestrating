@@ -31,12 +31,10 @@
             include ('sections/projects.html')
          ?>
       <!-- projects section end -->
-      <!-- footer section start -->
 
       <?php
-            include ('footer.html')
+      include('footer.html');
       ?>
-
 
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
@@ -45,9 +43,7 @@
       <!-- <script src="js/plugin.js"></script> -->
       <script src="js/custom.js"></script>
 
-      <?php
-      include('footer.html');
-      ?>
+
 
    </body>
 </html>

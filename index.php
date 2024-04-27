@@ -16,8 +16,8 @@
                                     ONDERHOUD</h1>
                                  <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                                  <div class="btn_main">
-                                    <div class="started_text active"><a href="#">Contact US</a></div>
-                                    <div class="started_text"><a href="#">About Us</a></div>
+                                    <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
+                                    <div class="started_text"><a href="#section_about">About Us</a></div>
                                  </div>
                               </div>
                            </div>
@@ -34,8 +34,8 @@
                                  &meer</h1>
                                  <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                                  <div class="btn_main">
-                                    <div class="started_text active"><a href="#">Contact US</a></div>
-                                    <div class="started_text"><a href="#">About Us</a></div>
+                                    <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
+                                    <div class="started_text"><a href="#section_about">About Us</a></div>
                                  </div>
                               </div>
                            </div>
@@ -52,8 +52,8 @@
                                     LATEN PLAATSEN</h1>
                                  <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                                  <div class="btn_main">
-                                    <div class="started_text active"><a href="#">Contact US</a></div>
-                                    <div class="started_text"><a href="#">About Us</a></div>
+                                    <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
+                                    <div class="started_text"><a href="#section_about">About Us</a></div>
                                  </div>
                               </div>
                            </div>
@@ -61,10 +61,10 @@
                      </div>
                   </div>
                </div>
-               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <a class="carousel-control-prev" alt="my_slider" href="#my_slider" role="button" data-slide="prev">
                <i class="fa fa-angle-left"></i>
                </a>
-               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <a class="carousel-control-next" alt="my_slider" href="#my_slider" role="button" data-slide="next">
                <i class="fa fa-angle-right"></i>
                </a>
             </div>

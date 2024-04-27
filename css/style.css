@@ -362,14 +362,16 @@ button {
     align-items: start;
     width: 100%;
     float: left;
-    min-height: 556px;
-    max-height: 1600px;
-    background: url(../IMG/paving_street_man.jpg) center right no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #212121;
+    background: url(../IMG/background-pc.jpg) center no-repeat;
     background-size: cover;
 }
 
 .preload-background {
-    background-image: url(../IMG/paving_street_man.jpg);
+    background-image: url(../IMG/background-pc.jpg) center no-repeat;
+    background-size: cover;
     /* Keep the element displayed while preloading */
 }
   
@@ -377,8 +379,8 @@ button {
 @media (max-width: 700px){
     .banner_section  {
 
-        background: url(../IMG/paving_street_man.jpg) center right no-repeat;
-
+        background: url(../IMG/background-mobile.jpg) center no-repeat;
+        background-size: cover;
     }
 }
 .header_bg {
@@ -472,11 +474,6 @@ button {
 
 /* banner section start */
 
-.banner_section  {
-    width: 100%;
-    float: left;
-    padding: 90px 0px;
-}
 
 .banner_taital_main {
     width: 43%;
@@ -718,7 +715,7 @@ button {
 }
 
 .services_section_2 {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 30px;
 }
@@ -758,7 +755,7 @@ button {
 }
 
 .service_img img {
-    min-height: 80px;
+    
 }
 
 .readmore_bt {
@@ -1016,9 +1013,13 @@ i.fa.fa-link {
     margin: 0px 0px;
     text-transform: uppercase;
     position: relative;
+    border: solid 1px #FF8141;
+    border-radius:15px;
 }
 .projects_section ul .filter-item  {
     padding-left: 10px;
+    padding-top: 30px;
+
 }
 
 .projects_section ul .project-fliter.active {

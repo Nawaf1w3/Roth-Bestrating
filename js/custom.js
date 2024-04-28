@@ -2,6 +2,11 @@
     File Name: custom.js
 ---------------------------------------------------------------------*/
 
+    //before after function
+$(function() {
+	$(".box-1[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
+ });
+
 
 document.addEventListener("DOMContentLoaded", function() {
 	var filterLinks = document.querySelectorAll('.project-fliter');

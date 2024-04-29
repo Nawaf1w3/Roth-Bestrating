@@ -100,15 +100,19 @@
       ?>
       <!-- contact section end -->
       <!-- footer section start -->
-      <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <!-- <script src="js/plugin.js"></script> -->
+      <script src="js/plugin.js"></script>
       <script src="js/custom.js"></script>
       <?php
       include('footer.html');
       ?>
 
+
+   <script>
+      $(function() {
+         $(".box-1[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
+      });
+   </script>
    </body>
 </html>

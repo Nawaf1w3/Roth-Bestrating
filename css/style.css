@@ -45,6 +45,7 @@
 .box-1{
     max-width:500px ;
     max-height: 500px;
+    min-height: 341.141px;
 }
 .form-btn-submit{
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */

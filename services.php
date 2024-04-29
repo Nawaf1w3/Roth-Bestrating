@@ -43,5 +43,21 @@
       <?php
       include('footer.html');
       ?>
+
+      <script>
+         function toggleText(container) {
+            const text = container.querySelector('.services_text');
+            const showMoreBtn = container.querySelector('.show_more_btn');
+
+            container.classList.toggle('expanded');
+            if (container.classList.contains('expanded')) {
+                  text.style.maxHeight = 'none';
+                  showMoreBtn.textContent = 'Show Less';
+            } else {
+                  text.style.maxHeight = '150px'; // Set the initial max height here
+                  showMoreBtn.textContent = 'Lees Meer';
+            }
+         }
+      </script>
    </body>
 </html>

@@ -42,8 +42,7 @@
       <script src="js/plugin.js"></script>
 
       <script>
-            
-    
+
             $(function() {
                $(".box-1[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
             });
@@ -59,7 +58,8 @@
                   showMoreBtn.textContent = 'Show Less';
             } else {
                   text.style.maxHeight = '130px'; // Set the initial max height here
-                  showMoreBtn.textContent = 'Lees Meer';
+                  showMoreBtn.textContent = 'Lees Meer...';
             }
          }
+         
      </script>

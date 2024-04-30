@@ -112,7 +112,7 @@
 
    <script>
       $(function() {
-         $(".box-1[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
+         $(".box-2[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
       });
 
       function toggleText(button) {

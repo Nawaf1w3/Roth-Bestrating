@@ -4,6 +4,7 @@
 ?>
          <!-- banner section start -->
          <div class="banner_section preload-background layout_padding">
+         <div class="overlay"></div>
             <div id="my_slider" class="carousel slide" data-ride="carousel">
                <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -70,8 +71,7 @@
             </div>
          </div>
       </div>
-         <!-- banner section end -->
-         <!-- header section end -->
+
 
       <!-- services section start -->
       <?php

@@ -48,4 +48,18 @@
                $(".box-1[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
             });
 
+
+            function toggleText(button) {
+            const container = button.closest('.services_item').querySelector('.services_text_container');
+            const text = container.querySelector('.services_text');
+            const showMoreBtn = button;
+            container.classList.toggle('expanded');
+            if (container.classList.contains('expanded')) {
+                  text.style.maxHeight = 'none';
+                  showMoreBtn.textContent = 'Show Less';
+            } else {
+                  text.style.maxHeight = '130px'; // Set the initial max height here
+                  showMoreBtn.textContent = 'Lees Meer';
+            }
+         }
      </script>

@@ -31,7 +31,7 @@
       <!-- header section end -->
       <!-- contact section start -->
       <?php
-         include ('sections\contact.html');
+         include('sections/contact.html');
       ?>
       <!-- contact section end -->
 

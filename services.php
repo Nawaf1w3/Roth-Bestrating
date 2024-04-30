@@ -43,18 +43,19 @@
       <?php
       include('footer.html');
       ?>
-
       <script>
-         function toggleText(container) {
-            const text = container.querySelector('.services_text');
-            const showMoreBtn = container.querySelector('.show_more_btn');
 
+      function toggleText(button) {
+            const container = button.closest('.services_item').querySelector('.services_text_container');
+            const text = container.querySelector('.services_text');
+            const showMoreBtn = button;
             container.classList.toggle('expanded');
+
             if (container.classList.contains('expanded')) {
                   text.style.maxHeight = 'none';
                   showMoreBtn.textContent = 'Show Less';
             } else {
-                  text.style.maxHeight = '150px'; // Set the initial max height here
+                  text.style.maxHeight = '130px'; // Set the initial max height here
                   showMoreBtn.textContent = 'Lees Meer';
             }
          }

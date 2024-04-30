@@ -44,23 +44,30 @@
 }
 
 .services_text_container {
-    max-height: 150px; /* Set the maximum height for truncation */
     overflow: hidden;
     position: relative;
 }
 
 .services_text {
+    max-height: 130px;
     margin-bottom: 20px; /* Add some space between the text and the button */
 }
 
 .show_more_btn {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: transparent;
-    border: none;
+    
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #FF8141;
+    float: le;
+    padding: 15px 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+.show_more_btn i:hover{
     cursor: pointer;
-    color: blue;
+    user-select: none;
 }
 
 .box-1 img{
@@ -796,16 +803,6 @@ button {
 }
 
 
-.readmore_bt  i{
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-    color: #FF8141;
-    float: le;
-    padding: 15px 20px;
-    margin-top: 10px;
-    font-weight: bold;
-}
 
 
 

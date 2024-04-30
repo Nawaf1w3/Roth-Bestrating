@@ -42,9 +42,10 @@
       <script src="js/plugin.js"></script>
 
       <script>
-
+            
+    
             $(function() {
-               $(".box-1[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
+               $(".box-2[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
             });
 
 
@@ -61,5 +62,4 @@
                   showMoreBtn.textContent = 'Lees Meer...';
             }
          }
-         
      </script>

@@ -99,15 +99,16 @@
          include ('sections/contact.html');
       ?>
       <!-- contact section end -->
+
+      <?php
+      include('footer.html');
+      ?>
+
       <!-- footer section start -->
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/plugin.js"></script>
       <script src="js/custom.js"></script>
-      <?php
-      include('footer.html');
-      ?>
-
 
    <script>
       $(function() {
@@ -128,5 +129,3 @@
             }
          }
    </script>
-   </body>
-</html>

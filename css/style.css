@@ -636,11 +636,15 @@ button {
 .about_text {
     width: 100%;
     float: left;
-    font-size: 16px;
-    color: #5a5959;
+    font-size: 18px;
+    color: #000000;
     margin-left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
+.about_img-container{
+    padding-top: 10%;
 
+}
 .about_img {
     width: 100%;
     float: left;
@@ -696,20 +700,16 @@ button {
 }
 
 .read_bt_1 {
-    width: 180px;
+    font-family: Arial, Helvetica, sans-serif;
     float: left;
     margin-top: 20px;
+    font-size: 19px;
 }
 
 .read_bt_1 a {
-    width: 100%;
-    float: left;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background-color: #282828;
-    color: #ffffff;
-    padding: 10px 0px;
-    border-radius: 40px;
     font-weight: bold;
 }
 
@@ -750,10 +750,10 @@ button {
 
 .services_text {
     width: 100%;
-    font-size: 16px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
     margin: 0px;
-    color: #000000;
+    color: #757575;
     padding-top: 20px;
 }
 

@@ -144,7 +144,7 @@ html {
 
 body {
     color: #1e1e1e;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.80857;
     font-weight:normal;
     overflow-x: hidden;
@@ -429,7 +429,7 @@ button {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: #212121;
-    background-image: url(../IMG/background-pc-2.jpg) no-repeat;
+    background: url(../IMG/background-pc-2.jpg) no-repeat;
     background-size: cover;
 
 }
@@ -445,7 +445,7 @@ button {
 @media (max-width: 700px){
     .banner_section  {
 
-        background: url(../IMG/background-mobile.jpg) center no-repeat;
+        background: url(../IMG/background-pc-2.jpg) center no-repeat;
         background-size: cover;
     }
 }
@@ -679,7 +679,7 @@ button {
 .about_img {
     width: 100%;
     float: left;
-    background-image: url(../images/about-img.png);
+    background-image: url(../IMG/background-pc-6.jpg);
     height: auto;
     background-size: cover;
     padding: 0px 0px 0px 0px;
@@ -1464,7 +1464,24 @@ textarea#comment.massage-bt::placeholder {
     flex-wrap: wrap;
 }
 
+.footer_menu1{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.footer_menu1 li{
+    font-size: 16px;
+    color: #ffffff;
+    padding: 10px 0;
+    flex-basis: 50%; /* Each item takes up half of the container width */
+}
+
+
 .footer_menu li {
+    
     font-size: 16px;
     color: #ffffff;
     padding: 5px 0;
@@ -1472,6 +1489,9 @@ textarea#comment.massage-bt::placeholder {
 }
 
 .footer_menu li a {
+    color: #ffffff;
+}
+.footer_menu1 li a {
     color: #ffffff;
 }
 

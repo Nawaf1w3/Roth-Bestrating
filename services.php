@@ -4,7 +4,7 @@
    include ('header-nav.html')
 ?>
          <!-- banner section start -->
-         <div class="banner_section preload-background layout_padding">
+         <div class="banner_section preload-background-services layout_padding">
          <div class="overlay"></div>
             <div id="my_slider" class="carousel slide" >
                <div class="carousel-inner">

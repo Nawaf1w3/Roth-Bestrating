@@ -144,9 +144,9 @@ html {
 
 body {
     color: #1e1e1e;
-    font-size: 16px;
+    font-size: auto;
     line-height: 1.80857;
-    font-weight:normal;
+    font-weight:500;
     overflow-x: hidden;
     font-family: Strawford, sans-serif;
     font-optical-sizing: auto;
@@ -429,25 +429,34 @@ button {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: #212121;
-    background: url(../IMG/background-pc-2.jpg) no-repeat;
-    background-size: cover;
+    /* background: url(../IMG/background-pc-2.jpg) no-repeat;
+    background-size: cover; */
 
 }
 
 .preload-background {
-    background: url(../IMG/background-pc-2.jpg) no-repeat;
+    background: url(../IMG/background-pc-2.jpg)  no-repeat;
     background-size:  cover;
+
+    /* Keep the element displayed while preloading */
+}
+.preload-background-services {
+    background: url(../IMG/background-pc-services.jpg) center no-repeat;
+    background-size:  cover;
+    min-height: 370px;
 
     /* Keep the element displayed while preloading */
 }
   
 
 @media (max-width: 700px){
-    .banner_section  {
+    .preload-background {
 
         background: url(../IMG/background-pc-2.jpg) center no-repeat;
         background-size: cover;
+        
     }
+
 }
 .header_bg {
     background-color: white;
@@ -472,7 +481,6 @@ button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     justify-content: space-between;
     align-items: center;
-    padding-right: 10px;
     padding-left: 20px;
     font-size: 20px;
     color: #000000;
@@ -520,7 +528,7 @@ button {
 
 
 
-.quote_btn a {
+.quote_btn{
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
     float: right;
     font-size: 16px;
@@ -529,15 +537,21 @@ button {
     background-color: #FF8141;
     border-radius: 40px;
     padding-right: 25px;
-    padding-left: 25px;
+    padding-left: 20px;
     padding-bottom: 5px;
     padding-top: 5px;
     text-transform: uppercase;
 }
 
-.quote_btn a:hover {
-    background-color: #FF8141;
+.quote_btn:hover {
+    background-color: #000000;
     color: #ffffff;
+}
+
+
+.nav-item-btn{
+    padding-left: 20px;
+   
 }
 
 
@@ -608,6 +622,9 @@ button {
     box-shadow: #FF8141(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+#my_slider{
+    min-height: 370px;
+}
 
 #my_slider a.carousel-control-prev {
     left: 30px;
@@ -784,7 +801,7 @@ button {
 
     font-size: 18px;
     margin: 0px;
-    color: #757575;
+    color: #454545;
     padding-top: 20px;
 }
 

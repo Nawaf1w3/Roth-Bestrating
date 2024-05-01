@@ -58,10 +58,11 @@
     width: 100%;
     text-align: center;
     font-size: 18px;
-    color: #FF8141;
+    color: #000000;
     float: le;
     margin-top: 10px;
     font-weight: bold;
+    
 
 }
 .show_more_btn-1 {
@@ -72,6 +73,7 @@
     float: le;
     margin-top: 10px;
     font-weight: bold;
+    text-shadow: 0 0 3px rgb(0, 0, 0, 1); /* Add a subtle text shadow */
 
 }
 .show_more_btn i:hover{
@@ -100,7 +102,7 @@
 }
 
 .form-btn-submit{
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+    text-shadow: 0 0 3px rgb(0, 0, 0, 1); /* Add a subtle text shadow */
     text-align: center;
     font-size: 18px;
     color: #ffffff;
@@ -452,7 +454,7 @@ button {
 @media (max-width: 700px){
     .preload-background {
 
-        background: url(../IMG/background-pc-2.jpg) center no-repeat;
+        background: url(../IMG/background-pc-5.jpg) center no-repeat;
         background-size: cover;
         
     }
@@ -529,7 +531,7 @@ button {
 
 
 .quote_btn{
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+    text-shadow: 0 0 3px rgba(0, 0, 0, 1);
     float: right;
     font-size: 16px;
     text-align: center;
@@ -596,6 +598,7 @@ button {
     width: 180px;
     margin-right: 20px;
     margin-top: 30px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 1);
 }
 
 .started_text a {
@@ -950,6 +953,7 @@ i.fa.fa-link {
     color: #ffffff;
     font-weight: bold;
     padding: 20px 10px 10px 10px;
+    text-shadow: 0 0 3px rgb(0, 0, 0, 1); /* Add a subtle text shadow */
 }
 
 .dummy_text {
@@ -957,11 +961,12 @@ i.fa.fa-link {
     font-size: 16px;
     margin: 0px;
     color: #ffffff;
+    
 }
 
 .project_main {
     color: #fff;
-    text-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    text-shadow: 0 0 3px rgb(0, 0, 0, 1); /* Add a subtle text shadow */
     padding: 0px 0px 10px 10px;
 
 }
@@ -1023,7 +1028,7 @@ i.fa.fa-link {
 
 .projects_section ul .nav-link {
     border-radius: 15px 50px 30px;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+    text-shadow: 0 0 3px rgb(0, 0, 0, 1); /* Add a subtle text shadow */
     color: #000;
 
     padding: 15px 15px;
@@ -1038,7 +1043,7 @@ i.fa.fa-link {
 }
 
 .projects_section ul .nav-link.active {
-   
+    text-shadow: 0 0 3px rgb(0, 0, 0, 1); /* Add a subtle text shadow */
     background-color: #FF8141;
     border-radius: 15px 50px 30px;
     color: #fff;
@@ -1082,7 +1087,7 @@ i.fa.fa-link {
     background-color: #FF8141;
     border-radius: 15px 50px 30px;
     color: #fff;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+    text-shadow: 0 0 3px rgba(0, 0, 0, 01); /* Add a subtle text shadow */
 }
 .projects_section ul .project-fliter:hover {
     border: solid 1px;

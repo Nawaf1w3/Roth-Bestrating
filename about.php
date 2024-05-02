@@ -31,7 +31,7 @@
       ?>
       <!-- about sectuion end -->
  
-   </body>
+
 
       <?php
          include('footer.html');

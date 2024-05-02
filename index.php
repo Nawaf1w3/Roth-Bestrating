@@ -96,7 +96,7 @@
       <!-- testimonial section end -->
       <!-- contact section start -->
       <?php
-         include ('sections/contact.html');
+         include ('sections/contact.php');
       ?>
       <!-- contact section end -->
        <!-- footer section start -->
@@ -157,4 +157,18 @@
                   showMoreBtn.textContent = 'Lees Meer';
             }
          }
+
+               // Form validation function
+      function validateForm() {
+        var form = document.getElementById("contactForm");
+        if (!form.checkValidity()) {
+            // If form is invalid, prevent form submission
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+    }
+
+    // Add event listener to form submission
+    document.getElementById("contactForm").addEventListener("submit", validateForm);
    </script>

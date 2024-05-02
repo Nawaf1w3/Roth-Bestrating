@@ -23,26 +23,39 @@
                             <div class="mail_section_1">
                                 <div class="row">
                                     <div class="col">
+                                    <span class="error-message text-danger"></span>
                                         <input type="text" class="voornaam" placeholder="Voornaam" name="voornaam">
-                                        <span class="error-message"></span>
+                                        
                                     </div>
                                     <div class="col">
+                                       <span class="error-message text-danger"></span>
                                         <input type="text" class="achternaam" placeholder="Achternaam" name="achternaam">
-                                        <span class="error-message"></span>
+                                        
                                     </div>
                                 </div>
-                                <input type="text" class="mail_text" placeholder="Telefoon" name="telefoon">
-                                <span class="error-message"></span>
-                                <input type="text" class="mail_text" placeholder="Adres" name="adres">
-                                <span class="error-message"></span>
-                                <input type="text" class="mail_text" placeholder="Email" name="email">
-                                <span class="error-message"></span>
-                                <textarea class="massage-bt" placeholder="Uw vraag of opmerking" rows="5" id="comment" name="opmerking"></textarea>
-                                <span class="error-message"></span>
+                                <div>
+                                    <span class="error-message text-danger"></span>
+                                    <input type="text" class="mail_text" placeholder="Telefoon" name="telefoon">
+                                    
+                                </div>
+                                <div>
+                                    <span class="error-message text-danger"></span>
+                                    <input type="text" class="mail_text" placeholder="Adres" name="adres">
+                                    
+                                </div>
+                                <div>
+                                    <span class="error-message text-danger"><?php echo isset($errors['voornaam']) ? $errors['voornaam'] : ''; ?></span>
+                                    <input type="text" class="mail_text" placeholder="Email" name="email">
+                                    
+                                </div>
+                                <div>
+                                    <span class="error-message text-danger"></span>
+                                    <textarea class="massage-bt" placeholder="Uw vraag of opmerking" rows="5" id="comment" name="opmerking"></textarea>
+                                    
+                                </div>
                                 <button class="form-btn-submit" type="submit">verzend</button>
                             </div>
                         </form>
-                        <div id="error-messages"></div>
                     </div>
 
              <div class="col-md-6 padding_left_15">

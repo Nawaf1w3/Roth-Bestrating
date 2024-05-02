@@ -34,7 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $achternaam = $_POST['achternaam'];
         $telefoon = $_POST['telefoon'];
         $adres = $_POST['adres'];
-        $email = $_POST['email'];
+        $email = $_POST['email']; // Extract email here
+        if (!$email ==="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/") {
+            $errors['email'] = "Invalid email format";
+        }
         $opmerking = $_POST['opmerking'];
 
         // Email details

@@ -28,6 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    $telefoon = $_POST['telefoon'];
+        if (!preg_match("/^06\d{8}$/", $telefoon)) {
+            $errors['telefoon'] = "Invalid phone number format";
+        }
+    $email = $_POST['email'];
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors['email'] = "Invalid email format";
+        }
+
     // If there are no validation errors, proceed with sending email
     if (empty($errors)) {
         // Get form data

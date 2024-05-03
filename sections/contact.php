@@ -19,7 +19,7 @@
 
           <div class="row">
                     <div class="col-md-6">
-                        <form action="send_email.php" method="POST" id="contactForm">
+                        <form action="send_email.php" method="POST" id="contactForm" enctype="multipart/form-data">
                             <div class="mail_section_1">
                                 <div class="row">
                                     <div class="col">
@@ -53,13 +53,17 @@
                                     <textarea class="massage-bt" placeholder="Uw vraag of opmerking" rows="5" id="comment" name="opmerking"></textarea>
                                     
                                 </div>
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Foto erbij (optional)</label><br>
+                                    <input class="" type="file" id="formFile" name="formFile">
+                                </div>
                                 <button class="form-btn-submit" type="submit">verzend</button>
                             </div>
                         </form>
                     </div>
 
              <div class="col-md-6 padding_left_15">
-                <div class="contact_img"><!--Contact form image--></div>
+                <div class="contact_img"><img src="IMG/contact-img.jpg" alt="contact-form-image" style="width: 80%; border-radius:30px;"></div>
              </div>
           </div>
        </div>

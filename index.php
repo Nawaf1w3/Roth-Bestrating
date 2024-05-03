@@ -3,9 +3,10 @@
    include ('header-nav.html')
 ?>
          <!-- banner section start -->
-         <div class="banner_section preload-background layout_padding">
+         <div class="banner_section layout_padding">
+
          <video autoplay muted loop id="video-background">
-                  <source src="img/videos/Sequence 02.mp4" type="video/mp4">
+               <source src="img/videoss/Sequence02.mp4" type="video/mp4">
          </video>
          <div class="overlay"></div>
             <div id="my_slider" class="carousel slide" >

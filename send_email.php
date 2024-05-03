@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'opmerking' => 'Opmerking'
     ];
 
+
     foreach ($requiredFields as $field => $fieldName) {
         if (empty($_POST[$field])) {
             $errors[$field] = "Please fill out the $fieldName field.";
@@ -34,13 +35,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $achternaam = $_POST['achternaam'];
         $telefoon = $_POST['telefoon'];
         $adres = $_POST['adres'];
-        $email = $_POST['email']; // Extract email here
-        if (!$email ==="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/") {
+        $email = $_POST['email'];
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = "Invalid email format";
         }
         $opmerking = $_POST['opmerking'];
 
+        // Process uploaded file
+        if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
+            $tmpFilePath = $_FILES['file']['tmp_name'];
+            $fileName = $_FILES['file']['name'];
+        }
+
         // Email details
+        
         $to = "nnauaf60@gmail.com"; // Temporary email for testing
         $subject = "Bestratingbedrijf Roth";
         $message = "<p style='font-family: Arial, sans-serif; font-size: 24px;'>Uw klant heeft een vraag op Bestratingbedrijf Roth: <br><br></p>
@@ -68,6 +76,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->setFrom('nnauaf6055@gmail.com');
             $mail->addAddress($to); // Add a recipient
 
+            // Attach file if uploaded
+            if(isset($_FILES['formFile']) && $_FILES['formFile']['error'] === UPLOAD_ERR_OK) {
+                $file_name = $_FILES['formFile']['name'];
+                $temp_path = $_FILES['formFile']['tmp_name'];
+                
+                // Add the file as an attachment to the email
+                $mail->addAttachment($temp_path, $file_name);
+            }
             // Content
             $mail->isHTML(true); // Set email format to HTML
             $mail->Subject = $subject;

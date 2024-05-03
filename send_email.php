@@ -74,6 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             // Server settings
             $mail->isSMTP();
+            $mail->SMTPDebug = 2;
             $mail->Host       = 'smtp.gmail.com'; // SMTP server
             $mail->SMTPAuth   = true;
             $mail->Username   = 'nnauaf6055@gmail.com'; // SMTP username

@@ -423,10 +423,21 @@ button {
     background-color: rgba(58, 58, 58, 0.5); /* Adjust opacity as needed */
 }
 
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire area */
+}
+
 .banner_section {
+    overflow: hidden;
     position: relative;
     align-items: start;
     width: 100%;
+    height: 100hv;
     float: left;
     padding-top: 100px;
     padding-bottom: 100px;

@@ -6,10 +6,10 @@
          <div class="banner_section layout_padding">
 
          <video autoplay muted loop id="video-background">
-               <source src="img/videoss/Sequence02.mp4" type="video/mp4">
+               <source src="IMG/videoss/Sequence02.mp4" type="video/mp4">
          </video>
          <div class="overlay"></div>
-            <div id="my_slider" class="carousel slide" >
+            <div id="my_slider" class="carousel slide">
                <div class="carousel-inner">
                   <div class="carousel-item active">
                      <div class="container">

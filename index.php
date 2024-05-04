@@ -5,7 +5,7 @@
          <!-- banner section start -->
          <div class="banner_section layout_padding">
 
-         <video autoplay muted loop id="video-background">
+         <video autoplay muted loop playsinline disablePictureInPicture id="video-background">
                <source src="IMG/videoss/Sequence02.mp4" type="video/mp4">
          </video>
          <div class="overlay"></div>

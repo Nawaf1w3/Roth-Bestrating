@@ -3,11 +3,39 @@
             include ('header-nav.html')
          ?>
          <!-- banner section start -->
-         <div class="banner_section preload-background layout_padding">
+         <div id="project-section" class="banner_section layout_padding">
          <div class="overlay"></div>
             <div id="my_slider" class="carousel slide" >
                <div class="carousel-inner">
                   <div class="carousel-item active">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <div class="banner_taital_main">
+                                 <h1 class="banner_taital">BESTRATING
+                                    AANLEG &
+                                    ONDERHOUD</h1>
+                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item ">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <div class="banner_taital_main">
+                                 <h1 class="banner_taital">BESTRATING
+                                    AANLEG &
+                                    ONDERHOUD</h1>
+                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item ">
                      <div class="container">
                         <div class="row">
                            <div class="col-sm-12">
@@ -37,7 +65,28 @@
       ?>
 
       <script>
-            
+      document.addEventListener("DOMContentLoaded", function() {
+         // Get all carousel items
+         const carouselItems = document.querySelectorAll(".carousel-item");
+         let currentIndex = 0;
+
+         // Set interval to switch carousel items every 3 seconds
+         setInterval(function() {
+            // Hide the current item by moving it to the left
+            carouselItems[currentIndex].classList.remove("active", "slide-in");
+            carouselItems[currentIndex].classList.add("slide-out-left");
+
+            // Calculate the index of the next item
+            const nextIndex = (currentIndex + 1) % carouselItems.length;
+
+            // Show the next item by moving it in from the right
+            carouselItems[nextIndex].classList.remove("slide-out-left");
+            carouselItems[nextIndex].classList.add("active", "slide-in");
+
+            // Update the current index
+            currentIndex = nextIndex;
+         }, 4000);
+      });     
             document.addEventListener("DOMContentLoaded", function() {
                var filterLinks = document.querySelectorAll('.project-fliter');
                var projectItems = document.querySelectorAll('.werk-item-1, .werk-item-2');

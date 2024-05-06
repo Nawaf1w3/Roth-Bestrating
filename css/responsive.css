@@ -151,12 +151,12 @@
     .quote_btn a {
         font-size: 14px;
     }
-    #my_slider a.carousel-control-prev {
+    #my_slider a.slide-control-prev {
         left: inherit;
         top: 180px;
         right: 30px;
     }
-    #my_slider a.carousel-control-next {
+    #my_slider a.slide-control-next {
         right: 30px;
         top: 120px;
         left: initial;
@@ -173,12 +173,12 @@
     .about_taital {
         padding-top: 40px;
     }
-    #costum_slider a.carousel-control-next {
+    #costum_slider a.slide-control-next {
         right: -60px;
         left: 0px;
         top: 550px;
     }
-    #costum_slider a.carousel-control-prev {
+    #costum_slider a.slide-control-prev {
         left: -60px;
         right: 0px;
         top: 550px;
@@ -196,13 +196,13 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    #my_slider a.carousel-control-prev {
+    #my_slider a.slide-control-prev {
         left: 30px;
         top: 180px;
         right: 0px;
         display: none;
     }
-    #my_slider a.carousel-control-next {
+    #my_slider a.slide-control-next {
         right: 0px;
         top: 120px;
         left: 30px;
@@ -255,10 +255,10 @@
         width: 100%;
         padding-top: 30px;
     }
-    #costum_slider a.carousel-control-next {
+    #costum_slider a.slide-control-next {
         top: 560px;
     }
-    #costum_slider a.carousel-control-prev {
+    #costum_slider a.slide-control-prev {
         top: 560px;
     }
     .textimonial_text {
@@ -292,13 +292,13 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-    #my_slider a.carousel-control-prev {
+    #my_slider a.slide-control-prev {
         left: 30px;
         top: 180px;
         right: 0px;
         display: none;
     }
-    #my_slider a.carousel-control-next {
+    #my_slider a.slide-control-next {
         right: 0px;
         top: 120px;
         left: 30px;
@@ -349,10 +349,10 @@
         width: 100%;
         padding-top: 30px;
     }
-    #costum_slider a.carousel-control-next {
+    #costum_slider a.slide-control-next {
         display: none;
     }
-    #costum_slider a.carousel-control-prev {
+    #costum_slider a.slide-control-prev {
         display: none;
     }
     .textimonial_text {
@@ -382,13 +382,13 @@
 }
 
 @media (max-width: 575px) {
-    #my_slider a.carousel-control-prev {
+    #my_slider a.slide-control-prev {
         left: 30px;
         top: 180px;
         right: 0px;
         display: none;
     }
-    #my_slider a.carousel-control-next {
+    #my_slider a.slide-control-next {
         right: 0px;
         top: 120px;
         left: 30px;
@@ -438,10 +438,10 @@
         width: 100%;
         padding-top: 30px;
     }
-    #costum_slider a.carousel-control-next {
+    #costum_slider a.slide-control-next {
         display: none;
     }
-    #costum_slider a.carousel-control-prev {
+    #costum_slider a.slide-control-prev {
         display: none;
     }
     .textimonial_text {

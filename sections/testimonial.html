@@ -1,8 +1,8 @@
 <div class="testimonial_section layout_padding">
     <div class="container">
-       <div id="costum_slider" class="carousel slide" >
-          <div class="carousel-inner">
-             <div class="carousel-item active">
+       <div id="cotum_slider" class="slide slide" >
+          <div class="slide-inner">
+             <div class="slide-item-review active">
                 <div class="row">
                    <div class="col-md-12">
                       <h1 class="testimonial_taital">Testimonial</h1>
@@ -17,7 +17,7 @@
                    </div>
                 </div>
              </div>
-             <div class="carousel-item">
+             <div class="slide-item-review">
                 <div class="row">
                    <div class="col-md-12">
                       <h1 class="testimonial_taital">Testimonial</h1>
@@ -32,7 +32,7 @@
                    </div>
                 </div>
              </div>
-             <div class="carousel-item">
+             <div class="slide-item-review">
                 <div class="row">
                    <div class="col-md-12">
                       <h1 class="testimonial_taital">Testimonial</h1>
@@ -48,11 +48,38 @@
                 </div>
              </div>
           </div>
-          <a class="carousel-control-prev" alt="my_slider" aria-label="next slider" href="#my_slider" role="button" data-slide="prev"><
-            <i class="fa fa-angle-left"></i>
-            </a>
-            <a class="carousel-control-next" alt="my_slider" aria-label="previose slider" href="#my_slider" role="button" data-slide="next">>
-            </a>
+          <a class="slide-control-prev" alt="my_slider" aria-label="next slider" href="#my_slider" role="button" data-slide="prev"><
+          </a>
+          <a class="slide-control-next" alt="my_slider" aria-label="previose slider" href="#my_slider" role="button" data-slide="next">>
+          </a>
        </div>
     </div>
  </div>
+
+
+ <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+         // Get all slide items
+         const slideItems = document.querySelectorAll(".slide-item-review");
+         let currentIndex = 0;
+
+         // Set interval to switch slide items every 3 seconds
+         setInterval(function() {
+            // Hide the current item by moving it to the left
+            slideItems[currentIndex].classList.remove("active", "slide-in");
+            slideItems[currentIndex].classList.add("slide-out-left");
+
+            // Calculate the index of the next item
+            const nextIndex = (currentIndex + 1) % slideItems.length;
+
+            // Show the next item by moving it in from the right
+            slideItems[nextIndex].classList.remove("slide-out-left");
+            slideItems[nextIndex].classList.add("active", "slide-in");
+
+            // Update the current index
+            currentIndex = nextIndex;
+         }, 4000);
+      });     
+
+ </script>

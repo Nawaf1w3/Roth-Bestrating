@@ -38,26 +38,10 @@
    
 
 <script>
-  
 
-
-
-
-         document.querySelector('.scroll-to-btn').addEventListener('click', function(e) {
-            e.preventDefault();
-            var targetSection = document.querySelector(this.getAttribute('href'));
-            console.log(targetSection);
-            var targetOffset = targetSection.offsetTop; // Adjust this value as needed
-            var scrollPosition = targetOffset - 100; // Adjust this value as needed (for example, to offset for a fixed header)
-
-            window.scrollTo({
-               top: scrollPosition,
-               behavior: 'smooth'
-            });
-         });
 
 </script>
 
-      <?php
-         include('footer.html');
-      ?>
+   <?php
+      include('footer.html');
+   ?>

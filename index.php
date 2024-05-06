@@ -9,9 +9,9 @@
                <source src="IMG/videoss/Sequence02.mp4" type="video/mp4">
          </video>
          <div class="overlay"></div>
-            <div id="my_slider" class="carousel slide">
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
+            <div id="my_slider" class="">
+               <div class="slide-inner">
+                  <div class="slide-item active">
                      <div class="container">
                         <div class="row">
                            <div class="col-sm-12">
@@ -29,7 +29,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="carousel-item">
+                  <div class="slide-item">
                      <div class="container">
                         <div class="row">
                            <div class="col-sm-12">
@@ -47,7 +47,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="carousel-item">
+                  <div class="slide-item">
                      <div class="container">
                         <div class="row">
                            <div class="col-sm-12">
@@ -66,12 +66,8 @@
                      </div>
                   </div>
                </div>
-               <a class="carousel-control-prev" alt="my_slider" aria-label="next slider" href="#my_slider" role="button" data-slide="prev"><
-               <i class="fa fa-angle-left"></i>
-               </a>
-               <a class="carousel-control-next" alt="my_slider" aria-label="previose slider" href="#my_slider" role="button" data-slide="next">>
-               
-               </a>
+               <button class="prev_slide">&lt;</button>
+               <button class="next_slide">&gt;</button>
             </div>
          </div>
       </div>
@@ -111,7 +107,56 @@
 
    <script>
 
-      
+document.addEventListener("DOMContentLoaded", function() {
+    const carouselItems = document.querySelectorAll(".slide-item");
+    let currentIndex = 0;
+
+    function showNextSlide() {
+        // Hide the current item by moving it to the left
+        carouselItems[currentIndex].classList.remove("active", "slide-in");
+        carouselItems[currentIndex].classList.add("slide-out-left");
+
+        // Calculate the index of the next item
+        const nextIndex = (currentIndex + 1) % carouselItems.length;
+
+        // Show the next item by moving it in from the right
+        carouselItems[nextIndex].classList.remove("slide-out-left");
+        carouselItems[nextIndex].classList.add("active", "slide-in");
+
+        // Update the current index
+        currentIndex = nextIndex;
+    }
+
+    function showPrevSlide() {
+        // Hide the current item by moving it to the right
+        carouselItems[currentIndex].classList.remove("active", "slide-in");
+        carouselItems[currentIndex].classList.add("slide-out-right");
+
+        // Calculate the index of the previous item
+        const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+
+        // Show the previous item by moving it in from the left
+        carouselItems[prevIndex].classList.remove("slide-out-right");
+        carouselItems[prevIndex].classList.add("active", "slide-in");
+
+        // Update the current index
+        currentIndex = prevIndex;
+    }
+
+    // Set interval to switch carousel items every 3 seconds
+    setInterval(showNextSlide, 4000);
+
+    // Add event listeners to the prev and next buttons
+    document.querySelector(".prev_slide").addEventListener("click", showPrevSlide);
+    document.querySelector(".next_slide").addEventListener("click", showNextSlide);
+});
+
+
+
+
+
+
+
          document.addEventListener("DOMContentLoaded", function() {
             var filterLinks = document.querySelectorAll('.project-fliter');
             var projectItems = document.querySelectorAll('.werk-item-1, .werk-item-2');

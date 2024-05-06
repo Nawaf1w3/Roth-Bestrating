@@ -21,21 +21,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'opmerking' => 'Opmerking'
     ];
 
-
     foreach ($requiredFields as $field => $fieldName) {
         if (empty($_POST[$field])) {
             $errors[$field] = "Please fill out the $fieldName field.";
         }
     }
 
+    // Validate phone number
     $telefoon = $_POST['telefoon'];
-        if (!preg_match("/^06\d{8}$/", $telefoon)) {
-            $errors['telefoon'] = "Invalid phone number format";
-        }
+    if (!preg_match("/^06\d{8}$/", $telefoon)) {
+        $errors['telefoon'] = "Invalid phone number format";
+    }
+
+    // Validate email
     $email = $_POST['email'];
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] = "Invalid email format";
-        }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors['email'] = "Invalid email format";
+    }
 
     // If there are no validation errors, proceed with sending email
     if (empty($errors)) {
@@ -45,26 +47,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $telefoon = $_POST['telefoon'];
         $adres = $_POST['adres'];
         $email = $_POST['email'];
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] = "Invalid email format";
-        }
         $opmerking = $_POST['opmerking'];
 
-        // Process uploaded file
-        if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
-            $tmpFilePath = $_FILES['file']['tmp_name'];
-            $fileName = $_FILES['file']['name'];
+        // Process uploaded files
+        $attachments = [];
+        if (!empty($_FILES['formFile']['name'][0])) {
+            $file_count = count($_FILES['formFile']['name']);
+            for ($i = 0; $i < $file_count; $i++) {
+                $attachments[] = [
+                    'tmp_name' => $_FILES['formFile']['tmp_name'][$i],
+                    'name' => $_FILES['formFile']['name'][$i]
+                ];
+            }
         }
 
         // Email details
-        
         $to = "nnauaf60@gmail.com"; // Temporary email for testing
         $subject = "Bestratingbedrijf Roth";
         $message = "<p style='font-family: Arial, sans-serif; font-size: 24px;'>Uw klant heeft een vraag op Bestratingbedrijf Roth: <br><br></p>
             <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Klant naam</strong><br>$voornaam $achternaam</p>
-            <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Telefoon</strong><br> $telefoon</p>
-            <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Adres</strong><br> $adres</p>
-            <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Email</strong><br> $email</p>
+            <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Telefoon</strong><br>$telefoon</p>
+            <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Adres</strong><br>$adres</p>
+            <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Email</strong><br>$email</p>
             <p style='font-family: Arial, sans-serif; font-size: 16px;'><strong>Opmerking</strong><br>$opmerking</p><br>
             <p style='font-family: Arial, sans-serif; font-size: 16px;'>Met vriendelijke groeten,<br> Uw Website.</p>";
 
@@ -75,29 +79,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Server settings
             $mail->isSMTP();
             $mail->SMTPDebug = 2;
-            $mail->Host       = 'smtp.gmail.com'; // SMTP server
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'nnauaf6055@gmail.com'; // SMTP username
-            $mail->Password   = 'aapy ljxi razv ijpb';   // SMTP password
+            $mail->Host = 'smtp.gmail.com'; // SMTP server
+            $mail->SMTPAuth = true;
+            $mail->Username = 'nnauaf6055@gmail.com'; // SMTP username
+            $mail->Password = 'aapy ljxi razv ijpb'; // SMTP password
             $mail->SMTPSecure = 'ssl'; // Enable TLS encryption
-            $mail->Port       = 465; // TCP port to connect to
+            $mail->Port = 465; // TCP port to connect to
 
             // Recipients
             $mail->setFrom('nnauaf6055@gmail.com');
             $mail->addAddress($to); // Add a recipient
 
-            // Attach file if uploaded
-            if(isset($_FILES['formFile']) && $_FILES['formFile']['error'] === UPLOAD_ERR_OK) {
-                $file_name = $_FILES['formFile']['name'];
-                $temp_path = $_FILES['formFile']['tmp_name'];
-                
-                // Add the file as an attachment to the email
-                $mail->addAttachment($temp_path, $file_name);
+            // Attach files
+            foreach ($attachments as $attachment) {
+                $mail->addAttachment($attachment['tmp_name'], $attachment['name']);
             }
+
             // Content
             $mail->isHTML(true); // Set email format to HTML
             $mail->Subject = $subject;
-            $mail->Body    = $message;
+            $mail->Body = $message;
 
             // Send email
             $mail->send();

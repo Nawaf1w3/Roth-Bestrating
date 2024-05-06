@@ -9,7 +9,7 @@
                  Wij staan klaar om u buitenruimte te transformeren met prachtige bestrating. Laat ons weten welke stijl,
                   kleuren en patronen u in gedachten hebt,
                    en wij zullen onze expertise inzetten om een meesterwerk te creëren dat niet alleen mooi is,
-                    maar ook duurzaam en functioneel. Vul het <strong><a class="font-weight-bold scroll-to-btn" href="#contact_section_2">formulier</a></strong>  in en geef uw straatwerk richting en karakter!
+                    maar ook duurzaam en functioneel. Vul het <strong><a class="text-16 font-weight-bold-contact scroll-to-btn" href="#contact_section_2">formulier</a></strong>  in en geef uw straatwerk richting en karakter!
             </p>
           </div>
        </div>
@@ -87,11 +87,11 @@
                                 </div>
                                 <div class="input-files">
                                     <label for="formFile" class="drag-box">
-                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="25" width="25" data-name="Layer 1" viewBox="0 0 24 24"><path d="M18.148,7.188c-.441-.099-.807-.379-1.001-.767-1.614-3.223-5.101-4.948-8.675-4.278-3.135,.581-5.669,3.079-6.306,6.217-.19,.933-.218,1.873-.083,2.796,.083,.567-.058,1.073-.386,1.388C.604,13.587,.001,14.99,0,16.495c0,3.136,2.364,5.5,5.5,5.5h10.736c4.131,0,7.611-3.234,7.759-7.211,.134-3.612-2.325-6.807-5.847-7.597Zm-1.912,13.808H5.5c-2.607,0-4.5-1.893-4.5-4.499,.001-1.229,.494-2.376,1.389-3.23,.565-.541,.815-1.362,.685-2.255-.118-.808-.093-1.633,.074-2.452,.556-2.742,2.77-4.926,5.508-5.434,.448-.083,.895-.123,1.335-.123,2.637,0,5.053,1.45,6.263,3.866,.33,.658,.94,1.13,1.677,1.296,3.052,.684,5.182,3.452,5.065,6.583-.127,3.445-3.159,6.248-6.759,6.248Zm-.969-8.849c.195,.195,.195,.512,0,.707-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146l-2.561-2.561v7.207c0,.276-.224,.5-.5,.5s-.5-.224-.5-.5v-7.207l-2.561,2.561c-.195,.195-.512,.195-.707,0s-.195-.512,0-.707l2.707-2.707c.243-.242,.552-.359,.868-.401,.059-.025,.124-.039,.192-.039s.133,.014,.192,.039c.317,.041,.626,.158,.869,.401l2.707,2.707Z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="100" width="100" data-name="Layer 1" viewBox="0 0 24 24"><path d="M18.148,7.188c-.441-.099-.807-.379-1.001-.767-1.614-3.223-5.101-4.948-8.675-4.278-3.135,.581-5.669,3.079-6.306,6.217-.19,.933-.218,1.873-.083,2.796,.083,.567-.058,1.073-.386,1.388C.604,13.587,.001,14.99,0,16.495c0,3.136,2.364,5.5,5.5,5.5h10.736c4.131,0,7.611-3.234,7.759-7.211,.134-3.612-2.325-6.807-5.847-7.597Zm-1.912,13.808H5.5c-2.607,0-4.5-1.893-4.5-4.499,.001-1.229,.494-2.376,1.389-3.23,.565-.541,.815-1.362,.685-2.255-.118-.808-.093-1.633,.074-2.452,.556-2.742,2.77-4.926,5.508-5.434,.448-.083,.895-.123,1.335-.123,2.637,0,5.053,1.45,6.263,3.866,.33,.658,.94,1.13,1.677,1.296,3.052,.684,5.182,3.452,5.065,6.583-.127,3.445-3.159,6.248-6.759,6.248Zm-.969-8.849c.195,.195,.195,.512,0,.707-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146l-2.561-2.561v7.207c0,.276-.224,.5-.5,.5s-.5-.224-.5-.5v-7.207l-2.561,2.561c-.195,.195-.512,.195-.707,0s-.195-.512,0-.707l2.707-2.707c.243-.242,.552-.359,.868-.401,.059-.025,.124-.039,.192-.039s.133,.014,.192,.039c.317,.041,.626,.158,.869,.401l2.707,2.707Z"/></svg>
                                         <p class="upload-text">Drop foto hier voor de werkplek (optioneel)</p>
                                     </label>
                                     <!-- Hidden file input -->
-                                    <input type="file" name="formFile" id="formFile" multiple onchange="displaySelectedFiles(this.files)">
+                                    <input type="file" name="formFile[]" id="formFile" multiple onchange="displaySelectedFiles(this.files)">
                                     <!-- Display selected files -->
                                     <div id="selected-files" class="selected-files"></div>
                                 </div>
@@ -125,50 +125,61 @@ var selectedFiles = []; // Array to store selected files
 
 // Function to display selected files
 function displaySelectedFiles(files) {
-  var selectedFilesDiv = document.getElementById('selected-files');
-  selectedFilesDiv.innerHTML = ''; // Clear previous selection
-  selectedFiles = []; // Clear previous selection
+    var selectedFilesDiv = document.getElementById('selected-files');
+    selectedFilesDiv.innerHTML = ''; // Clear previous selection
+    selectedFiles = []; // Clear previous selection
 
-  if (files.length > 0) {
-    var fileList = document.createElement('ul');
-    fileList.classList.add('list-unstyled');
-    
-    for (var i = 0; i < files.length; i++) {
-      var listItem = document.createElement('li');
-      listItem.style = ('border: 0px;box-shadow: 0px 0px 10px 0px #cfcfcf; max-width: none;padding-top:5px; justify-content: space-between;padding-bottom: 5px;')
-      listItem.classList.add('row');
-      listItem.classList.add('col-md-6')
-      listItem.classList.add('bg-white')
-      listItem.textContent = files[i].name;
-      fileList.appendChild(listItem);
-      selectedFiles.push(files[i]); // Add file to the selected files array
+    if (files.length > 0) {
+        var fileList = document.createElement('ul');
+        fileList.classList.add('list-unstyled');
 
-      // Create (X) button for each file
-      var deleteButton = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      deleteButton.setAttribute('class', 'delete-icon');
-      deleteButton.setAttribute('data-index', i);
-      deleteButton.setAttribute('viewBox', '0 0 24 24');
-      deleteButton.setAttribute('width', '10');
-      deleteButton.setAttribute('height', '10');
-      deleteButton.onclick = function() {
-        var index = this.getAttribute('data-index');
-        removeFile(index);
-      };
-      var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        path.setAttribute('d', 'm22.242,5.272l-3.515-3.515c-1.133-1.133-2.64-1.757-4.242-1.757h-4.971c-1.602,0-3.109,.624-4.243,1.757l-3.515,3.515c-1.133,1.134-1.757,2.641-1.757,4.243v4.971c0,1.602,.624,3.109,1.757,4.243l3.515,3.515c1.134,1.133,2.641,1.757,4.243,1.757h4.971c1.603,0,3.109-.624,4.242-1.757l3.515-3.514c1.134-1.133,1.758-2.64,1.758-4.243v-4.971c0-1.603-.624-3.11-1.758-4.243Zm-5.803,9.789c.391,.391,.391,1.023,0,1.414-.195,.195-.451,.293-.707,.293s-.512,-.098-.707,-.293l-3.043,-3.043-3.043,3.043c-.195,.195-.451,.293-.707,.293s-.512,-.098-.707,-.293c-.391,-.391,-.391,-1.023,0,-1.414l3.043,-3.043-3.043,-3.043c-.391,-.391,-.391,-1.023,0,-1.414s1.023,-.391,1.414,0l3.043,3.043,3.043,-3.043c.391,-.391,1.023,-.391,1.414,0s.391,1.023,0,1.414l-3.043,3.043,3.043,3.043Z');
-        path.setAttribute('fill', 'red');
-        deleteButton.appendChild(path);
+        for (var i = 0; i < files.length; i++) {
+            var listItem = document.createElement('li');
+            listItem.classList.add('col-md-6');
+            listItem.classList.add('bg-white');
+            listItem.style = ('display:flex; justify-content:space-btween; border: 0px; box-shadow: rgb(207, 207, 207) 0px 0px 10px 0px; max-width: none; padding-top: 5px;padding-bottom: 5px;');
 
+            var fileName = document.createElement('span');
+            fileName.textContent = files[i].name;
 
-      // Create container for (X) button
-      var buttonContainer = document.createElement('div');
-      buttonContainer.appendChild(deleteButton);
-      listItem.appendChild(buttonContainer);
+            // Calculate file size and display it in parentheses
+            var fileSize = document.createElement('span');
+            var fileSizeValue = (files[i].size / 1024).toFixed(2) + ' KB';
+            fileSize.textContent = '(' + fileSizeValue + ')';
+            fileSize.style = ('padding-right: 5px; padding-left: 5px; display:flex; justify-content:space-inbetween;');
+            listItem.appendChild(fileName);
+            listItem.appendChild(fileSize);
+            fileList.appendChild(listItem);
+            selectedFiles.push(files[i]); // Add file to the selected files array
+
+            // Create (X) button for each file
+            var deleteButton = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            deleteButton.setAttribute('class', 'delete-icon');
+            deleteButton.setAttribute('data-index', i);
+            deleteButton.setAttribute('viewBox', '0 0 24 24');
+            deleteButton.setAttribute('width', '10');
+            deleteButton.setAttribute('height', '10');
+            deleteButton.onclick = function() {
+                var index = this.getAttribute('data-index');
+                removeFile(index);
+            };
+
+            var path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            path.setAttribute('d', 'm22.242,5.272l-3.515-3.515c-1.133-1.133-2.64-1.757-4.242-1.757h-4.971c-1.602,0-3.109,.624-4.243,1.757l-3.515,3.515c-1.133,1.134-1.757,2.641-1.757,4.243v4.971c0,1.602,.624,3.109,1.757,4.243l3.515,3.515c1.134,1.133,2.641,1.757,4.243,1.757h4.971c1.603,0,3.109-.624,4.242-1.757l3.515-3.514c1.134-1.133,1.758-2.64,1.758-4.243v-4.971c0-1.603-.624-3.11-1.758-4.243Zm-5.803,9.789c.391,.391,.391,1.023,0,1.414-.195,.195-.451,.293-.707,.293s-.512,-.098-.707,-.293l-3.043,-3.043-3.043,3.043c-.195,.195-.451,.293-.707,.293s-.512,-.098-.707,-.293c-.391,-.391,-.391,-1.023,0,-1.414l3.043,-3.043-3.043,-3.043c-.391,-.391,-.391,-1.023,0,-1.414s1.023,-.391,1.414,0l3.043,3.043,3.043,-3.043c.391,-.391,1.023,-.391,1.414,0s.391,1.023,0,1.414l-3.043,3.043,3.043,3.043Z');
+            path.setAttribute('fill', 'red');
+            deleteButton.appendChild(path);
+
+            // Create container for (X) button
+            var buttonContainer = document.createElement('div');
+            buttonContainer.appendChild(deleteButton);
+            listItem.appendChild(buttonContainer);
+        }
+
+        selectedFilesDiv.appendChild(fileList);
     }
-
-    selectedFilesDiv.appendChild(fileList);
-  }
 }
+
+
 
 // Function to remove file from selection
 function removeFile(index) {

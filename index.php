@@ -66,11 +66,11 @@
                      </div>
                   </div>
                </div>
-               <a class="carousel-control-prev" alt="my_slider" href="#my_slider" role="button" data-slide="prev">
+               <a class="carousel-control-prev" alt="my_slider" aria-label="next slider" href="#my_slider" role="button" data-slide="prev"><
                <i class="fa fa-angle-left"></i>
                </a>
-               <a class="carousel-control-next" alt="my_slider" href="#my_slider" role="button" data-slide="next">
-               <i class="fa fa-angle-right"></i>
+               <a class="carousel-control-next" alt="my_slider" aria-label="previose slider" href="#my_slider" role="button" data-slide="next">>
+               
                </a>
             </div>
          </div>

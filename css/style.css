@@ -46,10 +46,7 @@
 
         width: 100%;
     }
-    .list-unstyled{
-        padding-left: 15px;
-        padding-bottom: 10px;
-    }
+
 
     /* Hide the default file input button */
     #formFile {
@@ -693,7 +690,7 @@ button {
     top: 120px;
     left: 30px;
     color: #ffffff;
-    background-color: #FF8141;
+    background-color: #000000;
 }
 
 #my_slider .carousel-control-next,
@@ -1246,6 +1243,10 @@ i.fa.fa-link {
     float: left;
 }
 
+.font-weight-bold-contact{
+    font-weight: 1000 !important;
+}
+
 .contact_taital {
 
     width: 100%;
@@ -1271,9 +1272,9 @@ i.fa.fa-link {
 }
 
 .mail_section_1 {
-    width: 80%;
-    float: left;
-    padding-left: 85px;
+    width: 85%;
+    /* float: left; */
+    padding-left: 100px;
     padding-top: 30px;
     
 }

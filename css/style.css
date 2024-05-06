@@ -110,6 +110,11 @@
         width: 100%;
     }
 
+    #project-section{
+        background: url('../IMG/background-project.jpg') center no-repeat;
+        background-size: cover;
+    }
+
 
     /* Hide the default file input button */
     #formFile {

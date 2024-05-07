@@ -73,8 +73,17 @@
     
     .slide-item.slide-in-right,
     .slide-item-review.slide-in-right {
-        animation: slideInRight 0.8s forwards;
+    animation: slideInLeft 0.8s forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
     }
+    to {
+        transform: translateX(0);
+    }
+}
     
     @keyframes slideInRight {
         from {

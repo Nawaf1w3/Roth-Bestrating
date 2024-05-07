@@ -2,8 +2,8 @@
 <!-- Your HTML code for the contact section -->
 <div class="contact_section layout_padding justify-content-center">
     <div class="container">
-       <div class="row justify-content-center text-center">
-          <div class="col-md-12 ">
+        <div class=" justify-content-center text-center">
+
              <h1 class="contact_taital">Of u nu op zoek bent naar een elegante oprit</h1>
              <p class="contact_taital-p">Sfeervolle sierbestrating of een functioneel terras.
                  Wij staan klaar om u buitenruimte te transformeren met prachtige bestrating. Laat ons weten welke stijl,
@@ -11,14 +11,14 @@
                    en wij zullen onze expertise inzetten om een meesterwerk te creëren dat niet alleen mooi is,
                     maar ook duurzaam en functioneel. Vul het <strong><a class="text-16 font-weight-bold-contact scroll-to-btn" href="#contact_section_2">formulier</a></strong>  in en geef uw straatwerk richting en karakter!
             </p>
-          </div>
+
        </div>
     </div>
     <div class="container-fluid justify-content-center">
        <div class="contact_section_2 " id="contact_section_2">
         
        <div class="text-center">
-        <h1 class="contact_taital">Of via..</h1>
+        <h1 class="contact_taital">contact</h1>
         <ul class="row justify-content-center">
             <li class="p-4">
                 <a href="tel:+31611169596" target="_blank" class="">
@@ -48,10 +48,11 @@
             </a>
             </li>
         </ul>
+        <h1 class="contact_taital">Of vul het formulier in</h1>
     </div>
-          <div class="row">
-                    <div class="col-md-6">
-                        <form action="send_email.php" method="POST" id="contactForm" enctype="multipart/form-data">
+    <div class="form-div justify-content-center">
+            <div id="formContainer" class="col-md-6">
+                <form action="send_email.php" method="POST" id="contactForm" enctype="multipart/form-data">
                             <div class="mail_section_1">
                                 <div class="row">
                                     <div class="col">
@@ -88,7 +89,7 @@
                                 <div class="input-files">
                                     <label for="formFile" class="drag-box">
                                         <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="100" width="100" data-name="Layer 1" viewBox="0 0 24 24"><path d="M18.148,7.188c-.441-.099-.807-.379-1.001-.767-1.614-3.223-5.101-4.948-8.675-4.278-3.135,.581-5.669,3.079-6.306,6.217-.19,.933-.218,1.873-.083,2.796,.083,.567-.058,1.073-.386,1.388C.604,13.587,.001,14.99,0,16.495c0,3.136,2.364,5.5,5.5,5.5h10.736c4.131,0,7.611-3.234,7.759-7.211,.134-3.612-2.325-6.807-5.847-7.597Zm-1.912,13.808H5.5c-2.607,0-4.5-1.893-4.5-4.499,.001-1.229,.494-2.376,1.389-3.23,.565-.541,.815-1.362,.685-2.255-.118-.808-.093-1.633,.074-2.452,.556-2.742,2.77-4.926,5.508-5.434,.448-.083,.895-.123,1.335-.123,2.637,0,5.053,1.45,6.263,3.866,.33,.658,.94,1.13,1.677,1.296,3.052,.684,5.182,3.452,5.065,6.583-.127,3.445-3.159,6.248-6.759,6.248Zm-.969-8.849c.195,.195,.195,.512,0,.707-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146l-2.561-2.561v7.207c0,.276-.224,.5-.5,.5s-.5-.224-.5-.5v-7.207l-2.561,2.561c-.195,.195-.512,.195-.707,0s-.195-.512,0-.707l2.707-2.707c.243-.242,.552-.359,.868-.401,.059-.025,.124-.039,.192-.039s.133,.014,.192,.039c.317,.041,.626,.158,.869,.401l2.707,2.707Z"/></svg>
-                                        <p class="upload-text">Drop foto hier voor de werkplek (optioneel)</p>
+                                        <p class="upload-text">Klik hier om foto's te uploaden (optioneel, meerdere mogelijk)</p>
                                     </label>
                                     <!-- Hidden file input -->
                                     <input type="file" name="formFile[]" id="formFile" multiple onchange="displaySelectedFiles(this.files)">
@@ -102,9 +103,9 @@
                         </form>
                     </div>
 
-             <div class="col-md-6 padding_left_15">
-                <div class="contact_img"><img src="IMG/contact-img.jpg" alt="contact-form-image" style="width: 80%; border-radius:30px;"></div>
-             </div>
+            <div class="col-md-6">
+                <div class="contact_img"><img class="contact-img-image" src="IMG/contact-img.jpg" alt="contact-form-image" style="width: 80%; border-radius:30px;"></div>
+            </div>
           </div>
        </div>
     </div>
@@ -123,13 +124,17 @@
 
 var selectedFiles = []; // Array to store selected files
 
-// Function to display selected files
 function displaySelectedFiles(files) {
     var selectedFilesDiv = document.getElementById('selected-files');
     selectedFilesDiv.innerHTML = ''; // Clear previous selection
     selectedFiles = []; // Clear previous selection
 
     if (files.length > 0) {
+        if (files.length > 4) {
+            alert("Maximaal 4 foto's kunnen worden geüpload.");
+            return; // Exit the function if file limit exceeded
+        }
+
         var fileList = document.createElement('ul');
         fileList.classList.add('list-unstyled');
 
@@ -177,9 +182,8 @@ function displaySelectedFiles(files) {
 
         selectedFilesDiv.appendChild(fileList);
     }
+
 }
-
-
 
 // Function to remove file from selection
 function removeFile(index) {
@@ -222,7 +226,35 @@ function removeFile(index) {
             .then(data => {
                 // Handle response data
                 if (data.success) {
-                    window.location.href = 'index.php?success=true';
+                    console.log(data.success);
+                    console.log('hallo');
+
+                    // Hide the form
+                    document.getElementById("contactForm").style.display = "none";
+
+                    // Create a container for the success message and SVG
+                    var formContainer = document.getElementById("formContainer");
+                    var successContainer = document.createElement('div');
+                    successContainer.classList.add('success-container');
+                    formContainer.appendChild(successContainer);
+
+
+                    // Create and append the SVG
+                    var svgContainer = document.createElement('div');
+                    svgContainer.innerHTML = `<svg class="success-icon" height="100" viewBox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Flat_Color" fill="#20bf55" data-name="Flat Color"><path d="m12 22.75a10.75 10.75 0 0 1 0-21.5 10.53 10.53 0 0 1 4.82 1.15.75.75 0 0 1 -.68 1.34 9 9 0 0 0 -4.14-1 9.25 9.25 0 1 0 9.25 9.26 2 2 0 0 0 0-.25.75.75 0 1 1 1.5-.14v.39a10.76 10.76 0 0 1 -10.75 10.75z"/><path d="m11.82 15.41a.7.7 0 0 1 -.52-.22l-4.83-4.74a.75.75 0 0 1 0-1.06.77.77 0 0 1 1.07 0l4.29 4.23 9.65-9.49a.77.77 0 0 1 1.07 0 .75.75 0 0 1 0 1.06l-10.18 10a.74.74 0 0 1 -.55.22z"/></g>
+                    </svg>`;
+                    successContainer.appendChild(svgContainer);
+
+                    // Create the success message
+                    var successMessage = document.createElement('div');
+                    successMessage.textContent = 'Uw formulier is succesvol verzonden. We reageren zo snel mogelijk op uw e-mail.';
+                    successContainer.appendChild(successMessage);
+
+                    // Refresh the page after a short delay
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1000); 
                 } else {
                     // If there are errors, display them next to corresponding input fields
                     Object.keys(data.errors).forEach(function (fieldName) {

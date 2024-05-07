@@ -5,11 +5,6 @@
              <div class="slide-item-review active">
                 <div class="row">
                    <div class="col-md-12">
-                      <h1 class="testimonial_taital">Testimonial</h1>
-                     <div class="testimonial_section_2">
-                         <h2 class="client_name_text">Molik <span style="float: right;">"</span></h2>
-                         <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
                      <div class="testimonial_section_2">
                          <h2 class="client_name_text">" <span style="float: right;">jeaanson</span></h2>
                          <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
@@ -20,11 +15,6 @@
              <div class="slide-item-review">
                 <div class="row">
                    <div class="col-md-12">
-                      <h1 class="testimonial_taital">Testimonial</h1>
-                     <div class="testimonial_section_2">
-                         <h2 class="client_name_text">Molik <span style="float: right;">"</span></h2>
-                         <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
                      <div class="testimonial_section_2">
                          <h2 class="client_name_text">" <span style="float: right;">jeaanson</span></h2>
                          <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
@@ -35,11 +25,6 @@
              <div class="slide-item-review">
                 <div class="row">
                    <div class="col-md-12">
-                      <h1 class="testimonial_taital">Testimonial</h1>
-                     <div class="testimonial_section_2">
-                         <h2 class="client_name_text">Molik <span style="float: right;">"</span></h2>
-                         <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                     </div>
                      <div class="testimonial_section_2">
                          <h2 class="client_name_text">" <span style="float: right;">jeaanson</span></h2>
                          <p class="textimonial_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
@@ -48,9 +33,8 @@
                 </div>
              </div>
           </div>
-          <a class="slide-control-prev" alt="my_slider" aria-label="next slider" href="#my_slider" role="button" data-slide="prev"><
-          </a>
-          <a class="slide-control-next" alt="my_slider" aria-label="previose slider" href="#my_slider" role="button" data-slide="next">>
+               <button class="prev_slide-review">&lt;</button>
+               <button class="next_slide-review">&gt;</button>
           </a>
        </div>
     </div>
@@ -60,26 +44,58 @@
  <script>
 
 document.addEventListener("DOMContentLoaded", function() {
-         // Get all slide items
-         const slideItems = document.querySelectorAll(".slide-item-review");
-         let currentIndex = 0;
+      const carouselItems = document.querySelectorAll(".slide-item-review");
+      let currentIndex = 0;
 
-         // Set interval to switch slide items every 3 seconds
-         setInterval(function() {
-            // Hide the current item by moving it to the left
-            slideItems[currentIndex].classList.remove("active", "slide-in");
-            slideItems[currentIndex].classList.add("slide-out-left");
+      function showNextSlide() {
+         // Hide the current item by moving it to the left
+         carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
+         carouselItems[currentIndex].classList.add("slide-out-left");
 
-            // Calculate the index of the next item
-            const nextIndex = (currentIndex + 1) % slideItems.length;
+         // Calculate the index of the next item
+         const nextIndex = (currentIndex + 1) % carouselItems.length;
 
-            // Show the next item by moving it in from the right
-            slideItems[nextIndex].classList.remove("slide-out-left");
-            slideItems[nextIndex].classList.add("active", "slide-in");
+         // Show the next item by moving it in from the right
+         carouselItems[nextIndex].classList.remove("slide-out-left", "slide-out-right");
+         carouselItems[nextIndex].classList.add("active", "slide-in");
 
-            // Update the current index
-            currentIndex = nextIndex;
-         }, 4000);
-      });     
+         // Update the current index
+         currentIndex = nextIndex;
+      }
+
+      function showPrevSlide() {
+         // Hide the current item by moving it to the right
+         carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
+         carouselItems[currentIndex].classList.add("slide-out-right");
+
+         // Calculate the index of the previous item
+         const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+
+         // Show the previous item by moving it in from the left
+         carouselItems[prevIndex].classList.remove("slide-out-right", "slide-out-left");
+         carouselItems[prevIndex].classList.add("active", "slide-in-right");
+
+         // Update the current index
+         currentIndex = prevIndex;
+      }
+
+      // Function to handle transition end event
+      function handleTransitionEnd(event) {
+         // Remove the slide-out-left or slide-out-right class after transition ends
+         event.target.classList.remove("slide-out-left", "slide-out-right");
+      }
+
+      // Add event listener for transition end on each carousel item
+      carouselItems.forEach(item => {
+         item.addEventListener("transitionend", handleTransitionEnd);
+      });
+
+      // Set interval to switch carousel items every 3 seconds
+      setInterval(showNextSlide, 5000);
+
+      // Add event listeners to the prev and next buttons
+      document.querySelector(".prev_slide-review").addEventListener("click", showPrevSlide);
+      document.querySelector(".next_slide-review").addEventListener("click", showNextSlide);
+   });    
 
  </script>

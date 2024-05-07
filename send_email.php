@@ -1,9 +1,9 @@
 <?php
 
-// Include PHPMailer library and other necessary files
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// Include PHPMailer library and other necessary files
 require 'vendor/autoload.php';
 
 // Initialize variables
@@ -78,7 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             // Server settings
             $mail->isSMTP();
-            $mail->SMTPDebug = 2;
             $mail->Host = 'smtp.gmail.com'; // SMTP server
             $mail->SMTPAuth = true;
             $mail->Username = 'nnauaf6055@gmail.com'; // SMTP username
@@ -104,29 +103,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->send();
 
             // Send success response
-            $response = [
-                'success' => true
-            ];
-            echo json_encode($response);
-            exit; // Terminate the script
+            header('Content-Type: application/json');
+            echo json_encode(['success' => true]);
+            exit;
         } catch (Exception $e) {
             // Send error response
-            $response = [
+            header('Content-Type: application/json');
+            echo json_encode([
                 'success' => false,
                 'message' => 'An error occurred while sending the email.'
-            ];
-            echo json_encode($response);
-            exit; // Terminate the script
+            ]);
+            exit;
         }
     } else {
         // Send error response with validation errors
+        header('Content-Type: application/json');
         echo json_encode([
             'success' => false,
             'errors' => $errors
         ]);
-        exit; // Terminate the script
+        exit;
     }
 }
 
-// Your HTML code starts here
 ?>

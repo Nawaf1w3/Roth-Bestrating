@@ -1,24 +1,45 @@
 <div id="section_about" class="about_section layout_padding pb-4">
-    <div class="container">
-       <div class="row">
-          <div class="col-md-6">
-             <h1 class="about_taital">Over onze</h1>
-             <p class="about_text">Welkom bij Bestratingsbedrijf Roth, opgericht door Danny, een gepassioneerde vakman met meer dan 19 jaar ervaring in de branche. Als trotse inwoner van Dronten heeft Danny een diepe verbondenheid met de gemeenschap en streeft hij ernaar om zijn medebewoners te voorzien van prachtige bestratingsoplossingen die de kwaliteit van hun buitenruimtes verbeteren.
+   <div class="container">
+       <div class="about-flex-div">
+           <div class="col-md-6">
+               <h1 class="about_taital">Over onze</h1>
+               <p class="about_text">Welkom bij Bestratingsbedrijf Roth, opgericht door Danny, een gepassioneerde vakman met meer dan 19 jaar ervaring in de branche. Als trotse inwoner van Dronten heeft Danny een diepe verbondenheid met de gemeenschap en streeft hij ernaar om zijn medebewoners te voorzien van prachtige bestratingsoplossingen die de kwaliteit van hun buitenruimtes verbeteren.
 
-               Danny's passie is om mensen blij te maken met nieuwe bestrating. Hij gelooft dat een goed aangelegd terras, een fraaie oprit of een charmant tuinpad niet alleen de esthetiek van een woning verbetert, maar ook het dagelijks leven van mensen verrijkt door een plek te creëren waar ze kunnen genieten, ontspannen en herinneringen kunnen maken.
-               
-               Bij Bestratingsbedrijf Roth streven we ernaar om niet alleen hoogwaardige bestratingsdiensten te leveren, maar ook om een persoonlijke en betrokken benadering te bieden die ervoor zorgt dat elk project aan de verwachtingen van onze klanten voldoet en deze zelfs overtreft. Neem vandaag nog contact met ons op en laat Danny en het team van Bestratingsbedrijf Roth uw buitenruimte transformeren tot iets buitengewoons.</p>
-             <div class="read_bt_1">voor vragen neem<a href="contact.php"> Contact </a>op</div>
-          </div>
-          <div class="col-md-6 about_img-container">
-             <div class="about_im">
-               <img src="img/" alt="">
-             </div>
-          </div>
+                   Danny's passie is om mensen blij te maken met nieuwe bestrating. Hij gelooft dat een goed aangelegd terras, een fraaie oprit of een charmant tuinpad niet alleen de esthetiek van een woning verbetert, maar ook het dagelijks leven van mensen verrijkt door een plek te creëren waar ze kunnen genieten, ontspannen en herinneringen kunnen maken.
+                   
+                   Bij Bestratingsbedrijf Roth streven we ernaar om niet alleen hoogwaardige bestratingsdiensten te leveren, maar ook om een persoonlijke en betrokken benadering te bieden die ervoor zorgt dat elk project aan de verwachtingen van onze klanten voldoet en deze zelfs overtreft. Neem vandaag nog contact met ons op en laat Danny en het team van Bestratingsbedrijf Roth uw buitenruimte transformeren tot iets buitengewoons.</p>
+               <div class="read_bt_1">voor vragen neem<a href="contact.php"> Contact </a>op</div>
+           </div>
+           <div class="col-md-6 about_img-container">
+               <div class="about_im">
+                   <img src="IMG\about-slider\1.jpg" alt="Image 1">
+                   <img src="IMG\about-slider\3.jpg" alt="Image 3">
+                   <img src="IMG\about-slider\4.jpg" alt="Image 4">
+                   <img src="IMG\about-slider\5.jpg" alt="Image 5">
+                   <img src="IMG\about-slider\6.jpg" alt="Image 6">
+                   <img src="IMG\about-slider\7.png" alt="Image 7">
+                   <img src="IMG\about-slider\8.png" alt="Image 8">
+                   <img src="IMG\about-slider\9.png" alt="Image 9">
+               </div>
+           </div>
        </div>
-    </div>
- </div>
+   </div>
+</div>
 
- <script>
+<script>
+   // JavaScript for image slider
+   let slideIndex = 0;
+   carousel();
 
- </script>
+   function carousel() {
+       let i;
+       const slides = document.getElementsByClassName("about_im")[0].getElementsByTagName("img");
+       for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";
+       }
+       slideIndex++;
+       if (slideIndex > slides.length) {slideIndex = 1}
+       slides[slideIndex-1].style.display = "block";
+       setTimeout(carousel, 2000); // Change image every 2 seconds
+   }
+</script>

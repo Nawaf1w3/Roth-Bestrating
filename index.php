@@ -3,7 +3,7 @@
    include ('header-nav.html')
 ?>
          <!-- banner section start -->
-         <div class="banner_section preload-background layout_padding">
+      <div class="banner_section preload-background layout_padding">
 
          <video autoplay muted loop playsinline disablePictureInPicture id="video-background">
                <source src="IMG/videoss/Sequence02.mp4" type="video/mp4">
@@ -70,7 +70,6 @@
                <button class="next_slide">&gt;</button>
             </div>
          </div>
-      </div>
 
 
       <!-- services section start -->

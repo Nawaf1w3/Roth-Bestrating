@@ -254,7 +254,7 @@ function removeFile(index) {
                     // Refresh the page after a short delay
                     setTimeout(() => {
                         window.location.reload();
-                    }, 10000); 
+                    }, 15000); 
                 } else {
                     // If there are errors, display them next to corresponding input fields
                     Object.keys(data.errors).forEach(function (fieldName) {

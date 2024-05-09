@@ -601,6 +601,7 @@ button {
 }
 
 .banner_section {
+    min-height: 602px;
     overflow: hidden;
     position: relative;
     align-items: start;
@@ -622,7 +623,6 @@ button {
 .preload-background-services {
     background: url(../IMG/background-pc-services.jpg) center no-repeat;
     background-size:  cover;
-    min-height: 370px;
 
     /* Keep the element displayed while preloading */
 }

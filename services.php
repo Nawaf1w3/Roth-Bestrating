@@ -6,20 +6,20 @@
          <!-- banner section start -->
          <div class="banner_section preload-background-services layout_padding">
          <div class="overlay"></div>
-            <div id="my_slider" class="carousel slide" >
-               <div class="carousel-inner">
+            <div id="my_slider" class="">
+               <div class="slide-inner">
                   <div class="slide-item active">
                      <div class="container">
                         <div class="row">
                            <div class="col-sm-12">
                               <div class="banner_taital_main">
-                                 <h1 class="banner_taital">
-                                    Bestrating
+                              <h1 class="banner_taital">
+                                 TUIN AANLEG/SIERBESTRATING
                                  </h1>
-                                 <p class="banner_text">Bij Bestratingsbedrijf Roth begrijpen we dat de juiste bedrijfsbestrating essentieel is voor een professionele uitstraling en optimale functionaliteit van uw bedrijfsomgeving. </p>
+                                 <p class="banner_text"> Onze tuinaanlegdiensten combineren vakmanschap en creativiteit om uw droomtuin tot leven te brengen. Met hoogwaardige sierbestrating als kern van ons aanbod, streven we ernaar om jouw buitenruimte te transformeren tot een waar paradijs. </p>
                               </div>
                               <div class="btn_main">
-                                    <div class="started_text active"><a href="Bestrating.php">Contact US</a></div>
+                                    <div class="started_text active"><a href="tuinbestrating.php">meer weten</a></div>
                                     <div class="started_text"><a href="#section_about">About Us</a></div>
                                  </div>
                            </div>
@@ -32,14 +32,14 @@
                            <div class="col-sm-12">
                               <div class="banner_taital_main">
                                  <h1 class="banner_taital">
-                                 TUIN AANLEG / SIERBESTRATING
+                                    Bestrating
                                  </h1>
-                                 <p class="banner_text"> Onze tuinaanlegdiensten combineren vakmanschap en creativiteit om uw droomtuin tot leven te brengen. Met hoogwaardige sierbestrating als kern van ons aanbod, streven we ernaar om jouw buitenruimte te transformeren tot een waar paradijs. </p>
+                                 <p class="banner_text">Bij Bestratingsbedrijf Roth begrijpen we dat de juiste bedrijfsbestrating essentieel is voor een professionele uitstraling en optimale functionaliteit van uw bedrijfsomgeving. </p>
                               </div>
                               <div class="btn_main">
-                                    <div class="started_text active"><a href="tuinbestratin.php">meer weten</a></div>
+                                    <div class="started_text active"><a href="Bestrating.php">Contact US</a></div>
                                     <div class="started_text"><a href="#section_about">About Us</a></div>
-                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
@@ -121,70 +121,82 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
-         const carouselItems = document.querySelectorAll(".slide-item");
-         let currentIndex = 0;
-         let intervalId;
+    const carouselItems = document.querySelectorAll(".slide-item");
+    let currentIndex = 0;
+    let intervalId;
 
-            intervalId = setInterval(showNextSlide, 1000);
+    intervalId = setInterval(showNextSlide, 1000);
 
-         function showNextSlide() {
-            resetTimer();
-            carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
-            carouselItems[currentIndex].classList.add("slide-out-left");
+    function showNextSlide() {
+    resetTimer();
+    carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
+    carouselItems[currentIndex].classList.add("slide-out-left");
 
-            const nextIndex = (currentIndex + 1) % carouselItems.length;
+    const nextIndex = (currentIndex + 1) % carouselItems.length;
 
-            carouselItems[nextIndex].classList.remove("slide-out-left", "slide-out-right");
-            carouselItems[nextIndex].classList.add("active", "slide-in");
-            currentIndex = nextIndex;
-         }
+    carouselItems[nextIndex].classList.remove("slide-out-left", "slide-out-right");
+    carouselItems[nextIndex].classList.add("active", "slide-in");
+    currentIndex = nextIndex;
 
-         function showPrevSlide() {
-            resetTimer();
+    // Call toggleSlideDisplay after changing the opacity
+    toggleSlideDisplay();
+}
 
-            carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
-            carouselItems[currentIndex].classList.add("slide-out-right");
+function showPrevSlide() {
+    resetTimer();
 
-            const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
+    carouselItems[currentIndex].classList.add("slide-out-right");
 
-            carouselItems[prevIndex].classList.remove("slide-out-right", "slide-out-left");
-            carouselItems[prevIndex].classList.add("active", "slide-in-right");
+    const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
 
-            currentIndex = prevIndex;
-         }
+    carouselItems[prevIndex].classList.remove("slide-out-right", "slide-out-left");
+    carouselItems[prevIndex].classList.add("active", "slide-in-right");
+    currentIndex = prevIndex;
 
-         function handleTransitionEnd(event) {
+    // Call toggleSlideDisplay after changing the opacity
+    toggleSlideDisplay();
+}
 
-            event.target.classList.remove("slide-out-left", "slide-out-right");
-         }
 
+    function handleTransitionEnd(event) {
+        event.target.classList.remove("slide-out-left", "slide-out-right");
+    }
+
+    carouselItems.forEach(item => {
+        item.addEventListener("transitionend", handleTransitionEnd);
+    });
+
+    function resetTimer() {
+        clearInterval(intervalId);
+        intervalId = setInterval(showNextSlide, 7000);
+        toggleSlideDisplay();
+    }
+
+    function toggleSlideDisplay() {
+      setInterval(() => {
          carouselItems.forEach(item => {
-            item.addEventListener("transitionend", handleTransitionEnd);
+               const computedStyle = window.getComputedStyle(item);
+               const opacity = parseFloat(computedStyle.getPropertyValue('opacity'));
+
+               if (opacity === 0) {
+                  item.style.display = "none";
+               } else {
+                  item.style.display = "block"; // Set display to block when opacity is not 0
+               }
          });
+      }, 100); // Adjust the interval as needed
+   }
+
+    document.querySelector(".prev_slide").addEventListener("click", function() {
+        showPrevSlide();
+        toggleSlideDisplay();
+    });
+    document.querySelector(".next_slide").addEventListener("click", function() {
+        showNextSlide();
+        toggleSlideDisplay();
+    });
+});
 
 
-
-         function resetTimer() {
-            clearInterval(intervalId);
-            intervalId = setInterval(showNextSlide, 7000);
-         }
-
-         document.querySelector(".prev_slide").addEventListener("click", showPrevSlide);
-         document.querySelector(".next_slide").addEventListener("click", showNextSlide);
-      });
-
-      function toggleText(button) {
-            const container = button.closest('.services_item').querySelector('.services_text_container');
-            const text = container.querySelector('.services_text');
-            const showMoreBtn = button;
-            container.classList.toggle('expanded');
-
-            if (container.classList.contains('expanded')) {
-                  text.style.maxHeight = 'none';
-                  showMoreBtn.textContent = 'Show Less';
-            } else {
-                  text.style.maxHeight = '130px'; // Set the initial max height here
-                  showMoreBtn.textContent = 'Lees Meer';
-            }
-         }
       </script>

@@ -247,9 +247,16 @@
         margin: 0px 5px;
         width: auto;
     }
+
     .image {
-        min-height: auto;
-        margin-top: 30px;
+        /* min-height: auto;
+        margin-top: 30px; */
+
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 160px;
+        max-height: 160px;
     }
     .testimonial_section_2 {
         width: 100%;
@@ -342,8 +349,10 @@
         padding: 12px 5px;
     }
     .image {
-        min-height: auto;
-        margin-top: 30px;
+        display: block;
+        width: 100%;
+        height: auto;
+
     }
     .testimonial_section_2 {
         width: 100%;
@@ -431,8 +440,10 @@
         padding: 12px 5px;
     }
     .image {
-        min-height: auto;
-        margin-top: 30px;
+        display: block;
+        width: 100%;
+        height: auto;
+
     }
     .testimonial_section_2 {
         width: 100%;

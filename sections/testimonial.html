@@ -48,52 +48,43 @@ document.addEventListener("DOMContentLoaded", function() {
       let currentIndex = 0;
 
       function showNextSlide() {
-         // Hide the current item by moving it to the left
+        
          carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
          carouselItems[currentIndex].classList.add("slide-out-left");
 
-         // Calculate the index of the next item
+
          const nextIndex = (currentIndex + 1) % carouselItems.length;
 
-         // Show the next item by moving it in from the right
          carouselItems[nextIndex].classList.remove("slide-out-left", "slide-out-right");
          carouselItems[nextIndex].classList.add("active", "slide-in");
 
-         // Update the current index
+
          currentIndex = nextIndex;
       }
 
       function showPrevSlide() {
-         // Hide the current item by moving it to the right
+
          carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
          carouselItems[currentIndex].classList.add("slide-out-right");
 
-         // Calculate the index of the previous item
          const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
 
-         // Show the previous item by moving it in from the left
          carouselItems[prevIndex].classList.remove("slide-out-right", "slide-out-left");
          carouselItems[prevIndex].classList.add("active", "slide-in-right");
 
-         // Update the current index
+
          currentIndex = prevIndex;
       }
 
-      // Function to handle transition end event
       function handleTransitionEnd(event) {
-         // Remove the slide-out-left or slide-out-right class after transition ends
          event.target.classList.remove("slide-out-left", "slide-out-right");
       }
 
-      // Add event listener for transition end on each carousel item
       carouselItems.forEach(item => {
          item.addEventListener("transitionend", handleTransitionEnd);
       });
 
-      // Set interval to switch carousel items every 3 seconds
       setInterval(showNextSlide, 5000);
-
-      // Add event listeners to the prev and next buttons
       document.querySelector(".prev_slide-review").addEventListener("click", showPrevSlide);
       document.querySelector(".next_slide-review").addEventListener("click", showNextSlide);
    });    

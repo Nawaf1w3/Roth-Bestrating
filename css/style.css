@@ -203,6 +203,10 @@
     position: relative;
 }
 
+.services_item{
+    padding-bottom: 50px;
+}
+
 .services_text {
     max-height: 130px;
     margin-bottom: 20px; /* Add some space between the text and the button */
@@ -938,6 +942,7 @@ button {
 }
 .about_img-container{
     padding-top: 10%;
+    max-height: 700px;
 
 }
 .about_img {
@@ -951,11 +956,13 @@ button {
 .about_im {
     width: 100%;
     overflow: hidden;
+    height: 300px;
 }
 .about_im img {
-    width: 100%;
+    position: absolute;
+    width: 90%;
     border-radius: 30px;
-    display: none;
+    
 }
 
 .read_bt_1 {
@@ -1123,6 +1130,7 @@ button {
     background-color: #FF8141;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    height: 100%;
 }
 
 .container_main:hover {

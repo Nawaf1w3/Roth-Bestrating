@@ -2,7 +2,6 @@
 <?php
    include ('header-nav.html')
 ?>
-         <!-- banner section start -->
       <div class="banner_section preload-background layout_padding">
 
          <video autoplay muted loop playsinline disablePictureInPicture id="video-background">
@@ -72,142 +71,109 @@
          </div>
 
 
-      <!-- services section start -->
       <?php
          include ('sections/services.html');
-      ?>
-      <!-- services section end -->
-      <!-- about sectuion start -->
-      <?php
+   
          include ('sections/about.html');
-      ?>
 
-      <!-- about sectuion end -->
-      <!-- projects section start -->
-      <?php
-            include ('sections/projects.html')
-      ?>
-      <!-- projects section end -->
-      <!-- testimonial section start -->
-      <?php
-         include ('sections/testimonial.html')
-      ?>
-      <!-- testimonial section end -->
-      <!-- contact section start -->
-      <?php
+         include ('sections/projects.html');
+
+         include ('sections/testimonial.html');
+  
          include ('sections/contact.php');
-      ?>
-      <!-- contact section end -->
-       <!-- footer section start -->
-      <?php
-      include('footer.html');
+
+         include('footer.html');
       ?>
 
 
-   <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const carouselItems = document.querySelectorAll(".slide-item");
-    let currentIndex = 0;
-    let intervalId;
+<script>
+         
+      document.addEventListener("DOMContentLoaded", function() {
+         const carouselItems = document.querySelectorAll(".slide-item");
+         let currentIndex = 0;
+         let intervalId;
 
-        // Set interval to switch carousel items every 5 seconds
-        intervalId = setInterval(showNextSlide, 1000);
+            intervalId = setInterval(showNextSlide, 1000);
 
-    function showNextSlide() {
-        resetTimer();
-        // Hide the current item by moving it to the left
-        carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
-        carouselItems[currentIndex].classList.add("slide-out-left");
+         function showNextSlide() {
+            resetTimer();
+            carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
+            carouselItems[currentIndex].classList.add("slide-out-left");
 
-        // Calculate the index of the next item
-        const nextIndex = (currentIndex + 1) % carouselItems.length;
+            const nextIndex = (currentIndex + 1) % carouselItems.length;
 
-        // Show the next item by moving it in from the right
-        carouselItems[nextIndex].classList.remove("slide-out-left", "slide-out-right");
-        carouselItems[nextIndex].classList.add("active", "slide-in");
+            carouselItems[nextIndex].classList.remove("slide-out-left", "slide-out-right");
+            carouselItems[nextIndex].classList.add("active", "slide-in");
+            currentIndex = nextIndex;
+         }
 
-        // Update the current index
-        currentIndex = nextIndex;
-    }
+         function showPrevSlide() {
+            resetTimer();
 
-    function showPrevSlide() {
-        resetTimer();
-        // Hide the current item by moving it to the right
-        carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
-        carouselItems[currentIndex].classList.add("slide-out-right");
+            carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
+            carouselItems[currentIndex].classList.add("slide-out-right");
 
-        // Calculate the index of the previous item
-        const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
 
-        // Show the previous item by moving it in from the left
-        carouselItems[prevIndex].classList.remove("slide-out-right", "slide-out-left");
-        carouselItems[prevIndex].classList.add("active", "slide-in-right");
+            carouselItems[prevIndex].classList.remove("slide-out-right", "slide-out-left");
+            carouselItems[prevIndex].classList.add("active", "slide-in-right");
 
-        // Update the current index
-        currentIndex = prevIndex;
-    }
+            currentIndex = prevIndex;
+         }
 
-    // Function to handle transition end event
-    function handleTransitionEnd(event) {
-        // Remove the slide-out-left or slide-out-right class after transition ends
-        event.target.classList.remove("slide-out-left", "slide-out-right");
-    }
+         function handleTransitionEnd(event) {
 
-    // Add event listener for transition end on each carousel item
-    carouselItems.forEach(item => {
-        item.addEventListener("transitionend", handleTransitionEnd);
-    });
+            event.target.classList.remove("slide-out-left", "slide-out-right");
+         }
 
-
-
-    function resetTimer() {
-        clearInterval(intervalId);
-        intervalId = setInterval(showNextSlide, 5000);
-    }
-
-    // Add event listeners to the prev and next buttons
-    document.querySelector(".prev_slide").addEventListener("click", showPrevSlide);
-    document.querySelector(".next_slide").addEventListener("click", showNextSlide);
-});
-
-
-
-
-
-
-
-
-         document.addEventListener("DOMContentLoaded", function() {
-            var filterLinks = document.querySelectorAll('.project-fliter');
-            var projectItems = document.querySelectorAll('.werk-item-1, .werk-item-2');
-            
-            function filterProjects(category) {
-               projectItems.forEach(function(item) {
-                  var itemCategory = item.dataset.category;
-                  if (category === 'alle' || category === itemCategory) {
-                     item.style.display = 'block';
-                  } else {
-                     item.style.display = 'none';
-                  }
-               });
-            }
-            filterLinks.forEach(function(link) {
-               link.addEventListener('click', function(event) {
-                  event.preventDefault();
-                  filterLinks.forEach(function(link) {
-                     link.classList.remove('active');
-                  });
-                  this.classList.add('active');
-                  var category = this.textContent.trim();
-                  filterProjects(category);
-               });
-            });
-            var initialActiveFilter = document.querySelector('.project-fliter.active');
-            if (initialActiveFilter) {
-               var initialCategory = initialActiveFilter.textContent.trim();
-               filterProjects(initialCategory);
-            }
+         carouselItems.forEach(item => {
+            item.addEventListener("transitionend", handleTransitionEnd);
          });
+
+
+
+         function resetTimer() {
+            clearInterval(intervalId);
+            intervalId = setInterval(showNextSlide, 5000);
+         }
+
+         document.querySelector(".prev_slide").addEventListener("click", showPrevSlide);
+         document.querySelector(".next_slide").addEventListener("click", showNextSlide);
+      });
+
+
+
+      document.addEventListener("DOMContentLoaded", function() {
+         var filterLinks = document.querySelectorAll('.project-fliter');
+         var projectItems = document.querySelectorAll('.werk-item-1, .werk-item-2');
+         
+         function filterProjects(category) {
+            projectItems.forEach(function(item) {
+               var itemCategory = item.dataset.category;
+               if (category === 'alle' || category === itemCategory) {
+                  item.style.display = 'block';
+               } else {
+                  item.style.display = 'none';
+               }
+            });
+         }
+         filterLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+               event.preventDefault();
+               filterLinks.forEach(function(link) {
+                  link.classList.remove('active');
+               });
+               this.classList.add('active');
+               var category = this.textContent.trim();
+               filterProjects(category);
+            });
+         });
+         var initialActiveFilter = document.querySelector('.project-fliter.active');
+         if (initialActiveFilter) {
+            var initialCategory = initialActiveFilter.textContent.trim();
+            filterProjects(initialCategory);
+         }
+      });
 
       $(function() {
          $(".box-2[data-orientation!='vertical']").twentytwenty({default_offset_pct:0.5})
@@ -222,22 +188,18 @@ document.addEventListener("DOMContentLoaded", function() {
                   text.style.maxHeight = 'none';
                   showMoreBtn.textContent = 'Show Less';
             } else {
-                  text.style.maxHeight = '130px'; // Set the initial max height here
+                  text.style.maxHeight = '130px'; 
                   showMoreBtn.textContent = 'Lees Meer';
             }
          }
 
-               // Form validation function
       function validateForm() {
         var form = document.getElementById("contactForm");
         if (!form.checkValidity()) {
-            // If form is invalid, prevent form submission
             event.preventDefault();
             event.stopPropagation();
         }
         form.classList.add('was-validated');
     }
 
-    // Add event listener to form submission
-    document.getElementById("contactForm").addEventListener("submit", validateForm);
    </script>

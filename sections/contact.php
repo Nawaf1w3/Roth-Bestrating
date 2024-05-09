@@ -1,5 +1,4 @@
 
-<!-- Your HTML code for the contact section -->
 <div class="contact_section layout_padding justify-content-center">
     <div class="container">
         <div class=" justify-content-center text-center">
@@ -91,9 +90,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="100" width="100" data-name="Layer 1" viewBox="0 0 24 24"><path d="M18.148,7.188c-.441-.099-.807-.379-1.001-.767-1.614-3.223-5.101-4.948-8.675-4.278-3.135,.581-5.669,3.079-6.306,6.217-.19,.933-.218,1.873-.083,2.796,.083,.567-.058,1.073-.386,1.388C.604,13.587,.001,14.99,0,16.495c0,3.136,2.364,5.5,5.5,5.5h10.736c4.131,0,7.611-3.234,7.759-7.211,.134-3.612-2.325-6.807-5.847-7.597Zm-1.912,13.808H5.5c-2.607,0-4.5-1.893-4.5-4.499,.001-1.229,.494-2.376,1.389-3.23,.565-.541,.815-1.362,.685-2.255-.118-.808-.093-1.633,.074-2.452,.556-2.742,2.77-4.926,5.508-5.434,.448-.083,.895-.123,1.335-.123,2.637,0,5.053,1.45,6.263,3.866,.33,.658,.94,1.13,1.677,1.296,3.052,.684,5.182,3.452,5.065,6.583-.127,3.445-3.159,6.248-6.759,6.248Zm-.969-8.849c.195,.195,.195,.512,0,.707-.098,.098-.226,.146-.354,.146s-.256-.049-.354-.146l-2.561-2.561v7.207c0,.276-.224,.5-.5,.5s-.5-.224-.5-.5v-7.207l-2.561,2.561c-.195,.195-.512,.195-.707,0s-.195-.512,0-.707l2.707-2.707c.243-.242,.552-.359,.868-.401,.059-.025,.124-.039,.192-.039s.133,.014,.192,.039c.317,.041,.626,.158,.869,.401l2.707,2.707Z"/></svg>
                                         <p class="upload-text">Klik hier om foto's te uploaden (optioneel, meerdere mogelijk)</p>
                                     </label>
-                                    <!-- Hidden file input -->
                                     <input type="file" name="formFile[]" id="formFile" multiple onchange="displaySelectedFiles(this.files)">
-                                    <!-- Display selected files -->
                                     <div id="selected-files" class="selected-files"></div>
                                 </div>
 
@@ -122,17 +119,17 @@
 
 <script>
 
-var selectedFiles = []; // Array to store selected files
+var selectedFiles = []; 
 
 function displaySelectedFiles(files) {
     var selectedFilesDiv = document.getElementById('selected-files');
-    selectedFilesDiv.innerHTML = ''; // Clear previous selection
-    selectedFiles = []; // Clear previous selection
+    selectedFilesDiv.innerHTML = ''; 
+    selectedFiles = [];
 
     if (files.length > 0) {
         if (files.length > 4) {
             alert("Maximaal 4 foto's kunnen worden geüpload.");
-            return; // Exit the function if file limit exceeded
+            return; 
         }
 
         var fileList = document.createElement('ul');
@@ -147,7 +144,6 @@ function displaySelectedFiles(files) {
             var fileName = document.createElement('span');
             fileName.textContent = files[i].name;
 
-            // Calculate file size and display it in parentheses
             var fileSize = document.createElement('span');
             var fileSizeValue = (files[i].size / 1024).toFixed(2) + ' KB';
             fileSize.textContent = '(' + fileSizeValue + ')';
@@ -155,9 +151,9 @@ function displaySelectedFiles(files) {
             listItem.appendChild(fileName);
             listItem.appendChild(fileSize);
             fileList.appendChild(listItem);
-            selectedFiles.push(files[i]); // Add file to the selected files array
+            selectedFiles.push(files[i]); 
 
-            // Create (X) button for each file
+
             var deleteButton = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             deleteButton.setAttribute('class', 'delete-icon');
             deleteButton.setAttribute('data-index', i);
@@ -174,7 +170,6 @@ function displaySelectedFiles(files) {
             path.setAttribute('fill', 'red');
             deleteButton.appendChild(path);
 
-            // Create container for (X) button
             var buttonContainer = document.createElement('div');
             buttonContainer.appendChild(deleteButton);
             listItem.appendChild(buttonContainer);
@@ -185,78 +180,67 @@ function displaySelectedFiles(files) {
 
 }
 
-// Function to remove file from selection
+
 function removeFile(index) {
-  selectedFiles.splice(index, 1); // Remove file from array
-  displaySelectedFiles(selectedFiles); // Redisplay files
+  selectedFiles.splice(index, 1); 
+  displaySelectedFiles(selectedFiles); 
 }
 
-
     document.addEventListener('DOMContentLoaded', function () {
-        // Get the form element
         var form = document.querySelector('form');
 
-        // Add submit event listener to the form
         form.addEventListener('submit', function (event) {
-            // Prevent default form submission
+
             event.preventDefault();
 
-            // Clear previous error messages
+
             var errorMessages = document.querySelectorAll('.error-message');
             errorMessages.forEach(function (errorMessage) {
                 errorMessage.textContent = '';
             });
 
-            // Get form data
             var formData = new FormData(form);
 
-            // Create fetch request
             fetch('send_email.php', {
                 method: 'POST',
                 body: formData
             })
             .then(response => {
-                // Check if response is successful
+
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                // Parse the response JSON
+
                 return response.json();
             })
             .then(data => {
-                // Handle response data
-                if (data.success) {
-                    console.log(data.success);
-                    console.log('hallo');
 
-                    // Hide the form
+                if (data.success) {
+
                     document.getElementById("contactForm").style.display = "none";
 
-                    // Create a container for the success message and SVG
                     var formContainer = document.getElementById("formContainer");
                     var successContainer = document.createElement('div');
                     successContainer.classList.add('success-container');
                     formContainer.appendChild(successContainer);
 
 
-                    // Create and append the SVG
                     var svgContainer = document.createElement('div');
                     svgContainer.innerHTML = `<svg class="success-icon" height="100" viewBox="0 0 24 24" width="100" xmlns="http://www.w3.org/2000/svg">
                     <g id="Flat_Color" fill="#20bf55" data-name="Flat Color"><path d="m12 22.75a10.75 10.75 0 0 1 0-21.5 10.53 10.53 0 0 1 4.82 1.15.75.75 0 0 1 -.68 1.34 9 9 0 0 0 -4.14-1 9.25 9.25 0 1 0 9.25 9.26 2 2 0 0 0 0-.25.75.75 0 1 1 1.5-.14v.39a10.76 10.76 0 0 1 -10.75 10.75z"/><path d="m11.82 15.41a.7.7 0 0 1 -.52-.22l-4.83-4.74a.75.75 0 0 1 0-1.06.77.77 0 0 1 1.07 0l4.29 4.23 9.65-9.49a.77.77 0 0 1 1.07 0 .75.75 0 0 1 0 1.06l-10.18 10a.74.74 0 0 1 -.55.22z"/></g>
                     </svg>`;
                     successContainer.appendChild(svgContainer);
 
-                    // Create the success message
                     var successMessage = document.createElement('div');
                     successMessage.textContent = 'Uw formulier is succesvol verzonden. We reageren zo snel mogelijk op uw e-mail.';
                     successContainer.appendChild(successMessage);
 
-                    // Refresh the page after a short delay
+
                     setTimeout(() => {
                         window.location.reload();
                     }, 15000); 
                 } else {
-                    // If there are errors, display them next to corresponding input fields
+
                     Object.keys(data.errors).forEach(function (fieldName) {
                         var inputField = form.querySelector('[name="' + fieldName + '"]');
                         var errorMessage = inputField.parentElement.querySelector('.error-message');
@@ -265,11 +249,9 @@ function removeFile(index) {
                 }
             })
             .catch(error => {
-                // Handle fetch errors
                 console.error('Fetch error:', error);
             });
         });
     });
-
 
 </script>

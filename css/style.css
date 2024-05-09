@@ -802,11 +802,11 @@ button {
 .next_slide
 {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     width: 60px;
     height: 60px;
-    left: 5%;
+    left: 90%;
     border-radius: 50%;
     background-color: white;
     color: black;

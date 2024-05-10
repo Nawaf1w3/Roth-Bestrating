@@ -306,9 +306,10 @@ body {
     color: #1e1e1e;
     font-size: auto;
     line-height: 1.80857;
-    font-weight:500;
+    font-weight:200;
     overflow-x: hidden;
     font-family: Strawford, sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     font-optical-sizing: auto;
     justify-content: center;
     font-style: normal;
@@ -1130,7 +1131,7 @@ button {
     background-color: #FF8141;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    height: 100%;
+    
 }
 
 .container_main:hover {

@@ -119,7 +119,7 @@
 
 <script>
 
-var selectedFiles = []; 
+var selectedFiles = [];
 
 function displaySelectedFiles(files) {
     var selectedFilesDiv = document.getElementById('selected-files');

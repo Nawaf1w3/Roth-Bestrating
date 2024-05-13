@@ -182,7 +182,7 @@ function displaySelectedFiles(files) {
 
 
 function removeFile(index) {
-  selectedFiles.splice(index, 1);
+  selectedFiles.splice(index, 1); 
   displaySelectedFiles(selectedFiles); 
 }
 

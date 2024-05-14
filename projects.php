@@ -54,7 +54,7 @@
                      <div class="row">
                         <div class="col-sm-12">
                            <div class="banner_taital_main">
-                              <h1 class="banner_taital">Sierbestrating </h1
+                              <h1 class="banner_taital">Sierbestrating </h1>
                               <p class="banner_text">Bij Bestratingsbedrijf Roth streven we ernaar om buitenruimtes te transformeren in ware pareltjes van vakmanschap en esthetiek.</p>
                               <div class="btn_main">
                               </div>

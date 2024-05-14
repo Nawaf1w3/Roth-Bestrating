@@ -3,72 +3,81 @@
    include ('header-nav.html')
 ?>
       <div class="banner_section preload-background layout_padding">
-
          <video autoplay muted loop playsinline disablePictureInPicture id="video-background">
                <source src="IMG/videoss/Sequence02.mp4" type="video/mp4">
          </video>
          <div class="overlay"></div>
-            <div id="my_slider" class="">
-               <div class="slide-inner">
-                  <div class="slide-item active">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BESTRATING
-                                    AANLEG &
-                                    ONDERHOUD</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                                 <div class="btn_main">
-                                    <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
-                                    <div class="started_text"><a href="#section_about">About Us</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="slide-item">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">DESKUNDIGE
-                                    TUINBESTRATING
-                                 &meer</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                                 <div class="btn_main">
-                                    <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
-                                    <div class="started_text"><a href="#section_about">About Us</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="slide-item">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">
-                                    SCHUTTING
-                                    LATEN PLAATSEN</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                                 <div class="btn_main">
-                                    <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
-                                    <div class="started_text"><a href="#section_about">About Us</a></div>
-                                 </div>
+         <div id="my_slider" class="">
+            <div class="slide-inner">
+               <div class="slide-item active">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">BESTRATING
+                                 AANLEG &
+                                 ONDERHOUD</h1>
+                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <div class="btn_main">
+                                 <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
+                                 <div class="started_text"><a href="#section_about">About Us</a></div>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <button class="prev_slide">&lt;</button>
-               <button class="next_slide">&gt;</button>
+               <div class="slide-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">DESKUNDIGE
+                                 TUINBESTRATING
+                              &meer</h1>
+                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <div class="btn_main">
+                                 <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
+                                 <div class="started_text"><a href="#section_about">About Us</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slide-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">
+                                 SCHUTTING
+                                 LATEN PLAATSEN</h1>
+                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <div class="btn_main">
+                                 <div class="started_text active"><a href="#contact_section_2">Contact US</a></div>
+                                 <div class="started_text"><a href="#section_about">About Us</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
+            <button class="prev_slide">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                  <path fill="none" d="M0 0h24v24H0z"/>
+               </svg>
+            </button>
+            <button class="next_slide">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                  <path fill="none" d="M0 0h24v24H0z"/>
+               </svg>
+            </button>
          </div>
+      </div>
 
 
       <?php

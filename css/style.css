@@ -70,6 +70,7 @@
     .slide-item-review {
         position: relative;
         float: left;
+        height: 100%;
         width: 100%;
         margin-right: -100%;
         -webkit-backface-visibility: hidden;
@@ -82,34 +83,35 @@
     .slide-item,
     .slide-item-review {
         opacity: 0;
-        transition: opacity 0.8s;
+        transition: opacity 0.4s;
     }
     
     .slide-item.active,
     .slide-item-review.active {
         opacity: 1;
-        transition: opacity 0.8s;
+        transition: opacity 0.4s;
     }
     
     .slide-item.slide-in,
     .slide-item-review.slide-in {
-        animation: slideInRight 0.8s forwards;
+        animation: slideInRight 0.4s forwards;
     }
     
     .slide-item.slide-out-left,
     .slide-item-review.slide-out-left {
-        animation: slideOutLeft 0.8s forwards;
+        animation: slideOutLeft 0.4s forwards;
     }
+    
     
     /* New CSS for next button animation */
     .slide-item.slide-out-right,
     .slide-item-review.slide-out-right {
-        animation: slideOutRight 0.8s forwards;
+        animation: slideOutRight 0.4s forwards;
     }
     
     .slide-item.slide-in-right,
     .slide-item-review.slide-in-right {
-    animation: slideInLeft 0.8s forwards;
+    animation: slideInLeft 0.4s forwards;
 }
 
 @keyframes slideInLeft {
@@ -612,7 +614,7 @@ button {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: #191b2b;
-
+    align-content: center;
 }
 
 .preload-background {
@@ -839,7 +841,10 @@ button {
 
 .slide-inner {
     display: flex;
+    justify-items: center;
+    align-items: center;
     transition: transform 0.5s ease;
+    
 }
 
 .slide-item {

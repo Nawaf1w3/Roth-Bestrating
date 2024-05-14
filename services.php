@@ -29,7 +29,7 @@
                   <div class="slide-item ">
                      <div class="container">
                         <div class="row">
-                           <div class="col-sm-12">
+                           <div class="col-sm-12 classss">
                               <div class="banner_taital_main">
                                  <h1 class="banner_taital">
                                     Bestrating
@@ -179,7 +179,7 @@ function showPrevSlide() {
 
     function resetTimer() {
         clearInterval(intervalId);
-        intervalId = setInterval(showNextSlide, 7000);
+        intervalId = setInterval(showNextSlide, 7000000);
         toggleSlideDisplay();
     }
 

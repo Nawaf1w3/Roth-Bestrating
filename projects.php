@@ -5,45 +5,44 @@
          <!-- banner section start -->
          <div id="project-section" class="banner_section layout_padding">
          <div class="overlay"></div>
-            <div id="my_slider" class="carousel slide" >
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BESTRATING
-                                    AANLEG &
-                                    ONDERHOUD</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+         <div id="my_slider" class="">
+            <div class="slide-inner">
+               <div class="slide-item active">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">Uitgaven grond</h1>
+                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <div class="btn_main">
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="carousel-item ">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BESTRATING
-                                    AANLEG &
-                                    ONDERHOUD</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+               </div>
+               <div class="slide-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">Aanbrengen zandlaag</h1>
+                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <div class="btn_main">
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="carousel-item ">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BESTRATING
-                                    AANLEG &
-                                    ONDERHOUD</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+               </div>
+               <div class="slide-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">Graafmachines</h1>
+                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <div class="btn_main">
                               </div>
                            </div>
                         </div>
@@ -51,6 +50,19 @@
                   </div>
                </div>
             </div>
+            <button class="prev_slide">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                  <path fill="none" d="M0 0h24v24H0z"/>
+               </svg>
+            </button>
+            <button class="next_slide">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                  <path fill="none" d="M0 0h24v24H0z"/>
+               </svg>
+            </button>
+         </div>
          </div>
       
       <!-- header section end -->
@@ -137,4 +149,59 @@
                   showMoreBtn.textContent = 'Lees Meer...';
             }
          }
+
+                  
+      document.addEventListener("DOMContentLoaded", function() {
+         const carouselItems = document.querySelectorAll(".slide-item");
+         let currentIndex = 0;
+         let intervalId;
+
+            intervalId = setInterval(showNextSlide, 1000);
+
+         function showNextSlide() {
+            resetTimer();
+            carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
+            carouselItems[currentIndex].classList.add("slide-out-left");
+
+            const nextIndex = (currentIndex + 1) % carouselItems.length;
+
+            carouselItems[nextIndex].classList.remove("slide-out-left", "slide-out-right");
+            carouselItems[nextIndex].classList.add("active", "slide-in");
+            currentIndex = nextIndex;
+         }
+
+         function showPrevSlide() {
+            resetTimer();
+
+            carouselItems[currentIndex].classList.remove("active", "slide-in", "slide-in-right");
+            carouselItems[currentIndex].classList.add("slide-out-right");
+
+            const prevIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+
+            carouselItems[prevIndex].classList.remove("slide-out-right", "slide-out-left");
+            carouselItems[prevIndex].classList.add("active", "slide-in-right");
+
+            currentIndex = prevIndex;
+         }
+
+         function handleTransitionEnd(event) {
+
+            event.target.classList.remove("slide-out-left", "slide-out-right");
+         }
+
+         carouselItems.forEach(item => {
+            item.addEventListener("transitionend", handleTransitionEnd);
+         });
+
+
+
+         function resetTimer() {
+            clearInterval(intervalId);
+            intervalId = setInterval(showNextSlide, 5000);
+         }
+
+         document.querySelector(".prev_slide").addEventListener("click", showPrevSlide);
+         document.querySelector(".next_slide").addEventListener("click", showNextSlide);
+      });
+
      </script>

@@ -13,7 +13,7 @@
                         <div class="col-sm-12">
                            <div class="banner_taital_main">
                               <h1 class="banner_taital">Uitgaven grond</h1>
-                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <p class="banner_text">Bij Bestratingsbedrijf Roth zijn we toegewijd aan het leveren van hoogwaardige diensten voor het uitgraven van grond, </p>
                               <div class="btn_main">
                               </div>
                            </div>
@@ -27,7 +27,7 @@
                         <div class="col-sm-12">
                            <div class="banner_taital_main">
                               <h1 class="banner_taital">Aanbrengen zandlaag</h1>
-                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <p class="banner_text">Bij Bestratingsbedrijf Roth begrijpen we het belang van een solide basis voor elk bestratingsproject. Daarom bieden we professionele diensten voor het aanbrengen van zand. </p>
                               <div class="btn_main">
                               </div>
                            </div>
@@ -41,7 +41,35 @@
                         <div class="col-sm-12">
                            <div class="banner_taital_main">
                               <h1 class="banner_taital">Graafmachines</h1>
-                              <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                              <p class="banner_text">Bij Bestratingsbedrijf Roth beschikken we over een uitgebreid assortiment graafmachines voor al uw grondwerkzaamheden. Van kleine klussen tot grootschalige projecten.</p>
+                              <div class="btn_main">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slide-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">Sierbestrating </h1>
+                              <p class="banner_text">Bij Bestratingsbedrijf Roth streven we ernaar om buitenruimtes te transformeren in ware pareltjes van vakmanschap en esthetiek.</p>
+                              <div class="btn_main">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slide-item">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">wildverband </h1>
+                              <p class="banner_text">Bij Bestratingsbedrijf Roth zijn we gespecialiseerd in het aanleggen van wildverband bestrating, een stijlvolle en natuurlijke optie voor jouw buitenruimte. </p>
                               <div class="btn_main">
                               </div>
                            </div>

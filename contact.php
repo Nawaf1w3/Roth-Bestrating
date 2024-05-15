@@ -3,7 +3,7 @@
    include ('header-nav.html');
    ?>
          <!-- banner section start -->
-      <div class="banner_section preload-background layout_padding">
+      <div id="contact-section" class="banner_section preload-background layout_padding">
          <div class="overlay"></div>
             <div id="my_slider" class="carousel slide" >
                <div class="carousel-inner">

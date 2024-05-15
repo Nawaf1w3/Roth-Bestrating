@@ -179,7 +179,7 @@ function showPrevSlide() {
 
     function resetTimer() {
         clearInterval(intervalId);
-        intervalId = setInterval(showNextSlide, 7000000);
+        intervalId = setInterval(showNextSlide, 7000);
         toggleSlideDisplay();
     }
 

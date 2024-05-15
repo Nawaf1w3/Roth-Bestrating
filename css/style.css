@@ -161,6 +161,10 @@
         background: url('../IMG/background-project.jpg') center no-repeat;
         background-size: cover;
     }
+    #contact-section{
+        background: url('../IMG/background-contact.jpg')  no-repeat;
+        background-size: cover;
+    }
 
 
     /* Hide the default file input button */

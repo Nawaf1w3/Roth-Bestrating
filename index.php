@@ -2,7 +2,7 @@
 <?php
    include ('header-nav.html')
 ?>
-      <div class="banner_section preload-background layout_padding">
+      <div class="banner_section layout_padding">
          <video autoplay muted loop playsinline disablePictureInPicture id="video-background">
                <source src="IMG/videoss/Sequence02.mp4" type="video/mp4">
          </video>

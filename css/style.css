@@ -627,6 +627,9 @@ button {
 
     /* Keep the element displayed while preloading */
 }
+.min-hieght{
+    min-height: 280px; ;
+}
 .preload-background-services {
     background: url(../IMG/background-pc-services.jpg) center no-repeat;
     background-size:  cover;

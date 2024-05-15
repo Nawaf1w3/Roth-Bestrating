@@ -37,7 +37,7 @@
                         <div class="row">
                             <div class="col-md-6 order-md-2"> <!-- Swap the order of the columns for smaller screens -->
                               <div class="after_before">  
-                                 <div class="box-1">
+                                 <div class="box-1 ">
                                     <img src="IMG/tuinbestrating/Tuin_Voor.jpg" >
                                     <img src="IMG/tuinbestrating/tuin-na.jpg">
                                  </div>
@@ -51,7 +51,7 @@
                           <!-- Second row -->
                         <div class="col-md-6">
                            <div class="after_before">  
-                              <div class="box-1">
+                              <div class="box-1 min-hieght">
                                  <img src="IMG/tuinbestrating/tuin_Svoor1.png" >
                                  <img src="IMG/tuinbestrating/tuin-Sna.png">
                               </div>

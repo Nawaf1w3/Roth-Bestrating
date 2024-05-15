@@ -12,9 +12,7 @@
                         <div class="row">
                            <div class="col-sm-12">
                               <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BESTRATING
-                                    AANLEG &
-                                    ONDERHOUD</h1>
+                                 <h1 class="banner_taital">Over Bestratingbedrijf Roth</h1>
                                  <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                               </div>
                            </div>

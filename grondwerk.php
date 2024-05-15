@@ -13,12 +13,11 @@
                      <div class="container">
                         <div class="row">
                            <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BESTRATING
-                                    AANLEG &
-                                    ONDERHOUD</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                              </div>
+                              <h1 class="banner_taital">Grondwerken
+                                    VOOR AANLEG &
+                                    ONDERHOUD
+                              </h1>
+                              <p class="banner_text">Betrouwbare grondwerken voor uw project. Van aanleg tot onderhoud, wij staan voor u klaar. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                            </div>
                         </div>
                      </div>
